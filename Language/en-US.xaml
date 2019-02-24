@@ -1,0 +1,151 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="strTitle">Color Wizard</sys:String>
+    
+    <sys:String x:Key="strProfile">Profile</sys:String>
+    <sys:String x:Key="strProfile1">Profile1</sys:String>
+    <sys:String x:Key="strProfile2">Profile2</sys:String>
+    <sys:String x:Key="strProfile3">Profile3</sys:String>
+    <sys:String x:Key="strProfile4">Profile4</sys:String>
+    <sys:String x:Key="strProfile5">Profile5</sys:String>
+
+    <sys:String x:Key="strImport">Import</sys:String>
+    <sys:String x:Key="strExport">Export</sys:String>
+
+    <sys:String x:Key="strWindows">Lighting Effect</sys:String>
+    <sys:String x:Key="strWelcome">Welcome Effect</sys:String>
+    <sys:String x:Key="strWelcomeHint">Effect on booting</sys:String>
+
+    <sys:String x:Key="strStatic">Static</sys:String>
+    <sys:String x:Key="strBreathing">Breathing</sys:String>
+    <sys:String x:Key="strWave">Wave</sys:String>
+    <sys:String x:Key="strRipple">Ripple</sys:String>
+    <sys:String x:Key="strReactive">Reactive</sys:String>
+    <sys:String x:Key="strRainbow">Rainbow</sys:String>
+    <sys:String x:Key="strMarquee">Marquee</sys:String>
+    <sys:String x:Key="strRaindrop">Raindrop</sys:String>
+    <sys:String x:Key="strStacker">Stacker</sys:String>
+    <sys:String x:Key="strImpact">Impact</sys:String>
+    <sys:String x:Key="strWhirling">Whirling</sys:String>
+    <sys:String x:Key="strAurora">Aurora</sys:String>
+    <sys:String x:Key="strSpark">Spark</sys:String>
+    <sys:String x:Key="strMusic">Music</sys:String>
+    <sys:String x:Key="strMusic1">Music1</sys:String>
+    <sys:String x:Key="strMusic2">Music2</sys:String>
+    <sys:String x:Key="strUserMode">User Mode</sys:String>
+    <sys:String x:Key="strCloseMode">Close</sys:String>
+    <sys:String x:Key="strNeon">Neon</sys:String>
+    <sys:String x:Key="strFlash">Flash</sys:String>
+    <sys:String x:Key="strMix">Mix</sys:String>
+
+    <sys:String x:Key="strMode">Mode</sys:String>
+    <sys:String x:Key="strSave">Save</sys:String>
+    <sys:String x:Key="strApply">Apply</sys:String>
+
+
+    <sys:String x:Key="strTrigger">Start</sys:String>
+    <sys:String x:Key="strTriggerAutomatic">Automatic</sys:String>
+    <sys:String x:Key="strTriggerOnKeyPressed">On Keypress</sys:String>
+
+    <sys:String x:Key="strKB">Backlight Colors</sys:String>
+
+    <sys:String x:Key="strClear">Clear</sys:String>
+
+    <sys:String x:Key="strColorSingle">Single Color</sys:String>
+
+    <sys:String x:Key="strDuration">Duration</sys:String>
+    <sys:String x:Key="strSec">Sec</sys:String>
+
+    <sys:String x:Key="strDirection">Direction</sys:String>
+    <sys:String x:Key="strLeftRight">Left to Right</sys:String>
+    <sys:String x:Key="strRightLeft">Right to Left</sys:String>
+    <sys:String x:Key="strTopBottom">Top to Bottom</sys:String>
+    <sys:String x:Key="strBottomTop">Bottom to Top</sys:String>
+    <sys:String x:Key="strClockWise">Clockwise</sys:String>
+    <sys:String x:Key="strCounterColckWise">Countercolckwise</sys:String>
+    <sys:String x:Key="strAuto">Auto</sys:String>
+    <sys:String x:Key="strOnKeyPressed">On Keypress</sys:String>
+    <sys:String x:Key="strSync">Sync</sys:String>
+
+    <sys:String x:Key="strBrightness">Brightness</sys:String>
+    <sys:String x:Key="strTempo">Rhythm</sys:String>
+    <sys:String x:Key="strSavingMode">Saving Mode</sys:String>
+    <sys:String x:Key="strPower">KBBL ON</sys:String>
+    <sys:String x:Key="strLedOnOff">Illumination OFF</sys:String>
+
+    <sys:String x:Key="strTipsClose">Close</sys:String>
+    <sys:String x:Key="strTipsPrevious">Previous</sys:String>
+    <sys:String x:Key="strTipsNext">Next</sys:String>
+
+    <sys:String x:Key="strTips0Title1">Profile :</sys:String>
+    <sys:String x:Key="strTips0Description1">Select, import, or export the profile setting.</sys:String>
+    <!--sys:String x:Key="strTips0Title2">Title2</-->
+    <!--sys:String x:Key="strTips0Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips1Title1">Effect List :</sys:String>
+    <sys:String x:Key="strTips1Description1">Select effect what you prefer.</sys:String>
+    <!--sys:String x:Key="strTips1Title2"></-->
+    <!--sys:String x:Key="strTips1Description2"></-->
+
+    <sys:String x:Key="strTips2Title1">Lighting Effect :</sys:String>
+    <sys:String x:Key="strTips2Description1">Setting lighting effects.</sys:String>
+    <sys:String x:Key="strTips2Title2">Welcome Effect :</sys:String>
+    <sys:String x:Key="strTips2Description2">Setting Welcome lighting effect.</sys:String>
+
+    <sys:String x:Key="strTips3Title1">User Mode setting :</sys:String>
+    <sys:String x:Key="strTips3Description1">Setting the lighting through the mouse for keys or  drag and drop a area you like.</sys:String>
+    <!--sys:String x:Key="strTips3Title2">tbd</-->
+    <!--sys:String x:Key="strTips3Description2">tbd</sys:String-->
+
+    <sys:String x:Key="strTips4Title1">Color Wheel : </sys:String>
+    <sys:String x:Key="strTips4Description1">To set the color.</sys:String>
+    <!--sys:String x:Key="strTips4Title2">Title2</-->
+    <!--sys:String x:Key="strTips4Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips5Title1">Clear : </sys:String>
+    <sys:String x:Key="strTips5Description1">Skip setting.</sys:String>
+    <!--sys:String x:Key="strTips5Title2">Title2</-->
+    <!--sys:String x:Key="strTips5Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips6Title1">Color :</sys:String>
+    <sys:String x:Key="strTips6Description1">Select color upon Color Diagram</sys:String>
+    <sys:String x:Key="strTips6Title2">Multi-Color :</sys:String>
+    <sys:String x:Key="strTips6Description2">Select colors upon Color Diagram and display lighting circle</sys:String>
+
+    <sys:String x:Key="strTips7Title1">Selected : </sys:String>
+    <sys:String x:Key="strTips7Description1">Display sigle color</sys:String>
+    <sys:String x:Key="strTips7Title2">Not Selected : </sys:String>
+    <sys:String x:Key="strTips7Description2">Circle display multipe color</sys:String>
+
+    <sys:String x:Key="strTips8Title1">Brightness : </sys:String>
+    <sys:String x:Key="strTips8Description1">Adjust the brightness of backlight from 0%( no backlight) to 100%.</sys:String>
+    <!--sys:String x:Key="strTips8Title2">Title2</-->
+    <!--sys:String x:Key="strTips8Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips9Title1">Rhythm : </sys:String>
+    <sys:String x:Key="strTips9Description1">Adjust the effect tempo</sys:String>
+    <!--sys:String x:Key="strTips9Title2">Title2</-->
+    <!--sys:String x:Key="strTips9Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips10Title1">Direction : </sys:String>
+    <sys:String x:Key="strTips10Description1">Set the  lighting effects direction</sys:String>
+    <!--sys:String x:Key="strTips10Title2">Title2</-->
+    <!--sys:String x:Key="strTips10Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips11Title1">Power :</sys:String>
+    <sys:String x:Key="strTips11Description1">On/Off RGB keyboard power。</sys:String>
+    <!--sys:String x:Key="strTips11Title2">Title2</-->
+    <!--sys:String x:Key="strTips11Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips12Title1">Saving Mode : </sys:String>
+    <sys:String x:Key="strTips12Description1">Go into power saving mode if display is turned off or idle after 10 minutes</sys:String>
+    <!--sys:String x:Key="strTips12Title2">Title2</-->
+    <!--sys:String x:Key="strTips12Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips13Title1">Save Lighting Effect: </sys:String>
+    <sys:String x:Key="strTips13Description1">Save and perform current lighting setting</sys:String>
+    <sys:String x:Key="strTips13Title2">Save Welcome Effect : </sys:String>
+    <sys:String x:Key="strTips13Description2">Perform welcome effect lighting setting from next booting</sys:String>
+
+</ResourceDictionary>

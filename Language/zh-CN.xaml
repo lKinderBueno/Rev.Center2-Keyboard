@@ -1,0 +1,153 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="strTitle">键盘背光管理</sys:String>
+
+    <sys:String x:Key="strProfile">配置文件</sys:String>
+    <sys:String x:Key="strProfile1">配置1</sys:String>
+    <sys:String x:Key="strProfile2">配置2</sys:String>
+    <sys:String x:Key="strProfile3">配置3</sys:String>
+    <sys:String x:Key="strProfile4">配置4</sys:String>
+    <sys:String x:Key="strProfile5">配置5</sys:String>
+
+    <sys:String x:Key="strImport">导入</sys:String>
+    <sys:String x:Key="strExport">导出</sys:String>
+
+    <sys:String x:Key="strWindows">背光模式</sys:String>
+    <sys:String x:Key="strWelcome">欢迎模式</sys:String>
+    <sys:String x:Key="strWelcomeHint">开机阶段时的背光效果</sys:String>
+
+    <sys:String x:Key="strStatic">单色</sys:String>
+    <sys:String x:Key="strBreathing">呼吸</sys:String>
+    <sys:String x:Key="strWave">波浪</sys:String>
+    <sys:String x:Key="strRipple">涟漪</sys:String>
+    <sys:String x:Key="strReactive">单点亮</sys:String>
+    <sys:String x:Key="strRainbow">彩虹</sys:String>
+    <sys:String x:Key="strMarquee">七彩跑马</sys:String>
+    <sys:String x:Key="strRaindrop">雨滴</sys:String>
+    <sys:String x:Key="strStacker">排列模式</sys:String>
+    <sys:String x:Key="strImpact">对冲</sys:String>
+    <sys:String x:Key="strWhirling">旋转</sys:String>
+    <sys:String x:Key="strAurora">极光</sys:String>
+    <sys:String x:Key="strSpark">烟火</sys:String>
+    <sys:String x:Key="strMusic">音乐模式</sys:String>
+    <sys:String x:Key="strMusic1">音乐模式1</sys:String>
+    <sys:String x:Key="strMusic2">音乐模式2</sys:String>
+    <sys:String x:Key="strUserMode">用户模式</sys:String>
+    <sys:String x:Key="strCloseMode">关闭</sys:String>
+    <sys:String x:Key="strNeon">霓虹</sys:String>
+    <sys:String x:Key="strFlash">闪烁</sys:String>
+    <sys:String x:Key="strMix">混色</sys:String>    
+
+    <sys:String x:Key="strMode">模式</sys:String>
+    <sys:String x:Key="strSave">保存</sys:String>
+    <sys:String x:Key="strApply">确定</sys:String>
+
+
+    <sys:String x:Key="strTrigger">开始</sys:String>
+    <sys:String x:Key="strTriggerAutomatic">自动</sys:String>
+    <sys:String x:Key="strTriggerOnKeyPressed">按任意键</sys:String>
+
+
+    <sys:String x:Key="strKB">背光设定区</sys:String>
+
+    <sys:String x:Key="strClear">清理</sys:String>
+
+    <sys:String x:Key="strColorSingle">单一选色</sys:String>
+
+    <sys:String x:Key="strDuration">持续时间</sys:String>
+    <sys:String x:Key="strSec">秒</sys:String>
+
+    <sys:String x:Key="strDirection">运行方向</sys:String>
+    <sys:String x:Key="strLeftRight">左至右</sys:String>
+    <sys:String x:Key="strRightLeft">右至左</sys:String>
+    <sys:String x:Key="strTopBottom">上至下</sys:String>
+    <sys:String x:Key="strBottomTop">下至上</sys:String>
+    <sys:String x:Key="strClockWise">顺时针</sys:String>
+    <sys:String x:Key="strCounterColckWise">逆时针</sys:String>
+    <sys:String x:Key="strAuto">自动</sys:String>
+    <sys:String x:Key="strOnKeyPressed">按任意键</sys:String>
+    <sys:String x:Key="strSync">同步</sys:String>
+
+    <sys:String x:Key="strBrightness">亮度</sys:String>
+    <sys:String x:Key="strTempo">速度</sys:String>
+    <sys:String x:Key="strSavingMode">节能模式</sys:String>
+    <sys:String x:Key="strPower">键盘背光开启</sys:String>
+    <sys:String x:Key="strLedOnOff">关闭全部LED</sys:String>
+
+    <sys:String x:Key="strTipsClose">关闭</sys:String>
+    <sys:String x:Key="strTipsPrevious">上一步</sys:String>
+    <sys:String x:Key="strTipsNext">下一步</sys:String>
+
+    <sys:String x:Key="strTips0Title1">配置文件 : </sys:String>
+    <sys:String x:Key="strTips0Description1">选择、导入、导出配置文件。</sys:String>
+    <!--sys:String x:Key="strTips0Title2">Title2</-->
+    <!--sys:String x:Key="strTips0Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips1Title1">灯效列表</sys:String>
+    <sys:String x:Key="strTips1Description1">选择你喜欢的灯光效果。</sys:String>
+    <!--sys:String x:Key="strTips1Title2"></-->
+    <!--sys:String x:Key="strTips1Description2"></-->
+
+    <sys:String x:Key="strTips2Title1">背光灯效 : </sys:String>
+    <sys:String x:Key="strTips2Description1">设置键盘背光灯效。</sys:String>
+    <sys:String x:Key="strTips2Title2">开机灯效</sys:String>
+    <sys:String x:Key="strTips2Description2">设置开机欢迎灯效。</sys:String>
+
+    <sys:String x:Key="strTips3Title1">自定义设置 : </sys:String>
+    <sys:String x:Key="strTips3Description1">通过鼠标点选按键浮起，进行单键颜色选择，再次点击不再浮起；也可通过鼠标圈选数键选色。</sys:String>
+    <!--sys:String x:Key="strTips3Title2">tbd</-->
+    <!--sys:String x:Key="strTips3Description2">tbd</sys:String-->
+
+    <sys:String x:Key="strTips4Title1">色区 : </sys:String>
+    <sys:String x:Key="strTips4Description1">选取颜色。</sys:String>
+    <!--sys:String x:Key="strTips4Title2">Title2</-->
+    <!--sys:String x:Key="strTips4Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips5Title1">清空 : </sys:String>
+    <sys:String x:Key="strTips5Description1">清空选取的颜色;在用户模式下，则是清空所选单键的颜色。</sys:String>
+    <!--sys:String x:Key="strTips5Title2">Title2</-->
+    <!--sys:String x:Key="strTips5Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips6Title1">单一选色 : </sys:String>
+    <sys:String x:Key="strTips6Description1">点选色块，决定要呈现的颜色。</sys:String>
+    <sys:String x:Key="strTips6Title2">多重选色 : </sys:String>
+    <sys:String x:Key="strTips6Description2">在选取多色的模式下，透过多重选色去呈现循环展示。</sys:String>
+
+    <sys:String x:Key="strTips7Title1">勾选单色模式 : </sys:String>
+    <sys:String x:Key="strTips7Description1">在色区内选定一个颜色展示。</sys:String>
+    <sys:String x:Key="strTips7Title2">不勾选單色模式 : </sys:String>
+    <sys:String x:Key="strTips7Description2">多个颜色循环展示。</sys:String>
+
+    <sys:String x:Key="strTips8Title1">亮度 : </sys:String>
+    <sys:String x:Key="strTips8Description1">分档位调节背光亮度从0%（无背光）到100%。</sys:String>
+    <!--sys:String x:Key="strTips8Title2">Title2</-->
+    <!--sys:String x:Key="strTips8Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips9Title1">节奏 : </sys:String>
+    <sys:String x:Key="strTips9Description1">调节灯效变换速度。</sys:String>
+    <!--sys:String x:Key="strTips9Title2">Title2</-->
+    <!--sys:String x:Key="strTips9Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips10Title1">方向 : </sys:String>
+    <sys:String x:Key="strTips10Description1">设置灯效变换方向。</sys:String>
+    <!--sys:String x:Key="strTips10Title2">Title2</-->
+    <!--sys:String x:Key="strTips10Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips11Title1">电源 : </sys:String>
+    <sys:String x:Key="strTips11Description1">启动或关闭键盘电源。</sys:String>
+    <!--sys:String x:Key="strTips11Title2">Title2</-->
+    <!--sys:String x:Key="strTips11Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips12Title1">节能模式 : </sys:String>
+    <sys:String x:Key="strTips12Description1">当屏幕熄灭或十分钟无操作后，进入节能模式背光熄灭。</sys:String>
+    <!--sys:String x:Key="strTips12Title2">Title2</-->
+    <!--sys:String x:Key="strTips12Description2">Description2</sys:String-->
+
+    <sys:String x:Key="strTips13Title1">保存背光模式设定 : </sys:String>
+    <sys:String x:Key="strTips13Description1">保存背光模式设定的效果到配置文件。</sys:String>
+    <sys:String x:Key="strTips13Title2">保存欢迎模式设定 :</sys:String>
+    <sys:String x:Key="strTips13Description2">提交当前欢迎模式设定，并在下一次开机时生效。</sys:String>
+
+
+</ResourceDictionary>

@@ -1,0 +1,233 @@
+﻿<UserControl x:Class="MyColor2.KBTable102"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyColor2"
+             mc:Ignorable="d">
+    <Grid x:Name="Grid_KB" Margin="26,220,0,0" Width="735" Height="240" HorizontalAlignment="Left" VerticalAlignment="Top" Background="#2E353D"
+                  MouseDown="Grid_KB_MouseDown" MouseUp="Grid_KB_MouseUp" MouseMove="Grid_KB_MouseMove" MouseLeave="Grid_KB_MouseLeave">
+        <!--KB Table-->
+        <Line x:Name="line_upper" HorizontalAlignment="Left" VerticalAlignment="Top" X1="0" Y1="0"  X2="735" Y2="0" Stroke="#808080" StrokeThickness="2" Visibility="Collapsed" />
+        <Line x:Name="line_lower" HorizontalAlignment="Left" VerticalAlignment="Top" X1="0" Y1="240"  X2="735" Y2="240" Stroke="#808080" StrokeThickness="2" Visibility="Collapsed"/>
+        <Line x:Name="line_lefter" HorizontalAlignment="Left" VerticalAlignment="Top" X1="0" Y1="0"  X2="0" Y2="240" Stroke="#808080" StrokeThickness="2" Visibility="Collapsed" />
+        <Line x:Name="line_righter" HorizontalAlignment="Left" VerticalAlignment="Top" X1="735" Y1="0"  X2="735" Y2="240" Stroke="#808080" StrokeThickness="2" Visibility="Collapsed" />
+        <Rectangle Name="rec_kb_esc" Margin="11,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_esc" Source="image/2ndKB_Img/UK/normal/esc_n.png" Margin="6,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f1" Margin="49,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f1" Source="image/2ndKB_Img/UK/normal/f1_n.png" Margin="44,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f2" Margin="87,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f2" Source="image/2ndKB_Img/UK/normal/f2_n.png" Margin="82,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f3" Margin="125,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f3" Source="image/2ndKB_Img/UK/normal/f3_n.png" Margin="120,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f4" Margin="163,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f4" Source="image/2ndKB_Img/UK/normal/f4_n.png" Margin="158,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f5" Margin="201,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f5" Source="image/2ndKB_Img/UK/normal/f5_n.png" Margin="196,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f6" Margin="239,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f6" Source="image/2ndKB_Img/UK/normal/f6_n.png" Margin="234,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f7" Margin="277,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f7" Source="image/2ndKB_Img/UK/normal/f7_n.png" Margin="272,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f8" Margin="315,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f8" Source="image/2ndKB_Img/UK/normal/f8_n.png" Margin="310,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f9" Margin="353,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f9" Source="image/2ndKB_Img/UK/normal/f9_n.png" Margin="348,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f10" Margin="391,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f10" Source="image/2ndKB_Img/UK/normal/f10_n.png" Margin="386,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f11" Margin="429,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f11" Source="image/2ndKB_Img/UK/normal/f11_n.png" Margin="424,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_f12" Margin="467,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_f12" Source="image/2ndKB_Img/UK/normal/f12_n.png" Margin="462,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_prtsc" Margin="505,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_prtsc" Source="image/2ndKB_Img/UK/normal/prtsc_n.png" Margin="500,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <!--
+        <Rectangle Name="rec_kb_insert" Margin="517,13,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_insert" Source="image/2ndKB_Img/UK/normal/del_n.png" Margin="515,11,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        -->
+        <Rectangle Name="rec_kb_del" Margin="543,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_del" Source="image/2ndKB_Img/UK/normal/del_n.png" Margin="538,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_home" Margin="581,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_home" Source="image/2ndKB_Img/UK/normal/home_n.png" Margin="576,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_end" Margin="619,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_end" Source="image/2ndKB_Img/UK/normal/end_n.png" Margin="614,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_pgup" Margin="657,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_pgup" Source="image/2ndKB_Img/UK/normal/pgup_n.png" Margin="652,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_pgdn" Margin="695,11,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_pgdn" Source="image/2ndKB_Img/UK/normal/pgdn_n.png" Margin="690,6,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_Quotes" Margin="11,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_Quotes" Source="image/2ndKB_Img/UK/normal/Quotes_n.png" Margin="6,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_1" Margin="49,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_1" Source="image/2ndKB_Img/UK/normal/1_n.png" Margin="44,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_2" Margin="87,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_2" Source="image/2ndKB_Img/UK/normal/2_n.png" Margin="82,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_3" Margin="125,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_3" Source="image/2ndKB_Img/UK/normal/3_n.png" Margin="120,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_4" Margin="163,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_4" Source="image/2ndKB_Img/UK/normal/4_n.png" Margin="158,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_5" Margin="201,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_5" Source="image/2ndKB_Img/UK/normal/5_n.png" Margin="196,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_6" Margin="239,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_6" Source="image/2ndKB_Img/UK/normal/6_n.png" Margin="234,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_7" Margin="277,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_7" Source="image/2ndKB_Img/UK/normal/7_n.png" Margin="272,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_8" Margin="315,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_8" Source="image/2ndKB_Img/UK/normal/8_n.png" Margin="310,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_9" Margin="353,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_9" Source="image/2ndKB_Img/UK/normal/9_n.png" Margin="348,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_0" Margin="391,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_0" Source="image/2ndKB_Img/UK/normal/0_n.png" Margin="386,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_underline" Margin="429,49,0,0" Width="27" Height="26" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_underline" Source="image/2ndKB_Img/UK/normal/underline_n.png" Margin="424,44,0,0" Width="37" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_equal" Margin="467,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Image x:Name="img_kb_equal" Source="image/2ndKB_Img/UK/normal/equal_n.png" Margin="462,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Rectangle Name="rec_kb_backspace" Margin="505,49,0,0" Width="66" Height="26" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_backspace" Source="image/2ndKB_Img/UK/normal/backspace_n.png" Margin="500,44,0,0" Width="76" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_numlock" Margin="581,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_numlock" Source="image/2ndKB_Img/UK/normal/numlock_n.png" Margin="576,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_ndevide" Margin="619,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_ndevide" Source="image/2ndKB_Img/UK/normal/ndevide_n.png" Margin="614,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_nmultiply" Margin="657,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_nmultiply" Source="image/2ndKB_Img/UK/normal/nmultiply_n.png" Margin="652,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_nminus" Margin="695,49,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_nminus" Source="image/2ndKB_Img/UK/normal/nminus_n.png" Margin="690,44,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_tab" Margin="11,87,0,0" Width="46" Height="26" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_tab" Source="image/2ndKB_Img/UK/normal/tab_n.png" Margin="6,82,0,0" Width="56" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_q" Margin="67,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_q" Source="image/2ndKB_Img/UK/normal/q_n.png" Margin="62,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_w" Margin="105,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_w" Source="image/2ndKB_Img/UK/normal/w_n.png" Margin="100,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_e" Margin="143,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_e" Source="image/2ndKB_Img/UK/normal/e_n.png" Margin="138,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_r" Margin="181,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_r" Source="image/2ndKB_Img/UK/normal/r_n.png" Margin="176,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_t" Margin="219,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_t" Source="image/2ndKB_Img/UK/normal/t_n.png" Margin="214,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_y" Margin="257,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_y" Source="image/2ndKB_Img/UK/normal/y_n.png" Margin="252,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_u" Margin="295,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_u" Source="image/2ndKB_Img/UK/normal/u_n.png" Margin="290,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_i" Margin="333,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_i" Source="image/2ndKB_Img/UK/normal/i_n.png" Margin="328,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_o" Margin="371,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_o" Source="image/2ndKB_Img/UK/normal/o_n.png" Margin="366,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_p" Margin="409,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_p" Source="image/2ndKB_Img/UK/normal/p_n.png" Margin="404,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_Lparantheses" Margin="447,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_Lparantheses" Source="image/2ndKB_Img/UK/normal/Lparantheses_n.png" Margin="442,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_Rparantheses" Margin="485,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_Rparantheses" Source="image/2ndKB_Img/UK/normal/Rparantheses_n.png" Margin="480,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_enter" Margin="523,87,0,0" Width="49" Height="28" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_enter1" Margin="543,115,0,0" Width="29" Height="37" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_enter" Source="image/2ndKB_Img/UK/normal/enter_n.png" Margin="518,82,0,0" Width="58" Height="75" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n7" Margin="581,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n7" Source="image/2ndKB_Img/UK/normal/n7_n.png" Margin="576,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n8" Margin="619,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n8" Source="image/2ndKB_Img/UK/normal/n8_n.png" Margin="614,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n9" Margin="657,87,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n9" Source="image/2ndKB_Img/UK/normal/n9_n.png" Margin="652,82,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_nplus" Margin="695,87,0,0" Width="28" Height="65" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_nplus" Source="image/2ndKB_Img/UK/normal/nplus_n.png" Margin="690,82,0,0" Width="38" Height="75" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_capslock" Margin="11,125,0,0" Width="66" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_capslock" Source="image/2ndKB_Img/UK/normal/capslock_n.png" Margin="6,120,0,0" Width="76" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_a" Margin="87,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_a" Source="image/2ndKB_Img/UK/normal/a_n.png" Margin="82,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_s" Margin="125,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_s" Source="image/2ndKB_Img/UK/normal/s_n.png" Margin="120,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_d" Margin="163,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_d" Source="image/2ndKB_Img/UK/normal/d_n.png" Margin="158,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_f" Margin="201,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_f" Source="image/2ndKB_Img/UK/normal/f_n.png" Margin="196,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_g" Margin="239,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_g" Source="image/2ndKB_Img/UK/normal/g_n.png" Margin="234,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_h" Margin="277,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_h" Source="image/2ndKB_Img/UK/normal/h_n.png" Margin="272,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_j" Margin="315,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_j" Source="image/2ndKB_Img/UK/normal/j_n.png" Margin="310,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_k" Margin="353,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_k" Source="image/2ndKB_Img/UK/normal/k_n.png" Margin="348,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_l" Margin="391,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_l" Source="image/2ndKB_Img/UK/normal/l_n.png" Margin="386,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_colon" Margin="429,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_colon" Source="image/2ndKB_Img/UK/normal/colon_n.png" Margin="424,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_at" Margin="467,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_at" Source="image/2ndKB_Img/UK/normal/at_n.png" Margin="462,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_hashtag" Margin="505,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_hashtag" Source="image/2ndKB_Img/UK/normal/hashtag_n.png" Margin="500,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n4" Margin="581,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n4" Source="image/2ndKB_Img/UK/normal/n4_n.png" Margin="576,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n5" Margin="619,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n5" Source="image/2ndKB_Img/UK/normal/n5_n.png" Margin="614,120,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n6" Margin="657,125,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n6" Source="image/2ndKB_Img/UK/normal/n6_n.png" Margin="652,120,0,0" Width="38" Height="38" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_Lshift" Margin="11,163,0,0" Width="45" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_Lshift" Source="image/2ndKB_Img/UK/normal/Lshift_n.png" Margin="6,158,0,0" Width="55" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_backslash" Margin="66,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_backslash" Source="image/2ndKB_Img/UK/normal/backslash_n.png" Margin="61,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_z" Margin="104,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_z" Source="image/2ndKB_Img/UK/normal/z_n.png" Margin="99,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_x" Margin="142,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_x" Source="image/2ndKB_Img/UK/normal/x_n.png" Margin="137,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_c" Margin="180,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_c" Source="image/2ndKB_Img/UK/normal/c_n.png" Margin="175,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_v" Margin="218,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_v" Source="image/2ndKB_Img/UK/normal/v_n.png" Margin="213,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_b" Margin="256,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_b" Source="image/2ndKB_Img/UK/normal/b_n.png" Margin="251,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n" Margin="294,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n" Source="image/2ndKB_Img/UK/normal/n_n.png" Margin="289,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_m" Margin="332,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_m" Source="image/2ndKB_Img/UK/normal/m_n.png" Margin="327,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_less" Margin="370,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_less" Source="image/2ndKB_Img/UK/normal/less_n.png" Margin="365,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_more" Margin="408,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_more" Source="image/2ndKB_Img/UK/normal/more_n.png" Margin="403,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_question" Margin="446,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_question" Source="image/2ndKB_Img/UK/normal/question_n.png" Margin="441,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_Rshift" Margin="484,163,0,0" Width="49" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_Rshift" Source="image/2ndKB_Img/UK/normal/Rshift_n.png" Margin="479,158,0,0" Width="59" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_up" Margin="543,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_up" Source="image/2ndKB_Img/UK/normal/up_n.png" Margin="538,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n1" Margin="581,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n1" Source="image/2ndKB_Img/UK/normal/n1_n.png" Margin="576,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n2" Margin="619,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n2" Source="image/2ndKB_Img/UK/normal/n2_n.png" Margin="614,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n3" Margin="657,163,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n3" Source="image/2ndKB_Img/UK/normal/n3_n.png" Margin="652,158,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_nenter" Margin="695,163,0,0" Width="28" Height="65" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_nenter" Source="image/2ndKB_Img/UK/normal/nenter_n.png" Margin="690,158,0,0" Width="38" Height="75" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_Lctrl" Margin="11,201,0,0" Width="45" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_Lctrl" Source="image/2ndKB_Img/UK/normal/Lctrl_n.png" Margin="6,196,0,0" Width="55" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_fn" Margin="66,201,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_fn" Source="image/2ndKB_Img/UK/normal/fn_n.png" Margin="61,196,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_windows" Margin="104,201,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_windows" Source="image/2ndKB_Img/UK/normal/windows_n.png" Margin="99,196,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_Lalt" Margin="142,201,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_Lalt" Source="image/2ndKB_Img/UK/normal/Lalt_n.png" Margin="137,196,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_space" Margin="180,201,0,0" Width="180" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_space" Source="image/2ndKB_Img/UK/normal/space_n.png" Margin="175,196,0,0" Width="190" Height="37" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_altgr" Margin="370,201,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_altgr" Source="image/2ndKB_Img/UK/normal/altgr_n.png" Margin="365,196,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_list" Margin="408,201,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_list" Source="image/2ndKB_Img/UK/normal/list_n.png" Margin="403,196,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_Rctrl" Margin="446,201,0,0" Width="49" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_Rctrl" Source="image/2ndKB_Img/UK/normal/Rctrl_n.png" Margin="441,196,0,0" Width="59" Height="37" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_left" Margin="505,201,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_left" Source="image/2ndKB_Img/UK/normal/left_n.png" Margin="500,196,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_down" Margin="543,201,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_down" Source="image/2ndKB_Img/UK/normal/down_n.png" Margin="538,196,0,0" Width="38" Height="37" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_right" Margin="581,201,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_right" Source="image/2ndKB_Img/UK/normal/right_n.png" Margin="576,196,0,0" Width="38" Height="37" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_n0" Margin="619,201,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_n0" Source="image/2ndKB_Img/UK/normal/n0_n.png" Margin="614,196,0,0" Width="38" Height="37" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle Name="rec_kb_ndot" Margin="657,201,0,0" Width="28" Height="27" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Image x:Name="img_kb_ndot" Source="image/2ndKB_Img/UK/normal/ndot_n.png" Margin="652,196,0,0" Width="38" Height="37" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top" />
+
+        <Canvas Name="dragSelectionCanvas" Visibility="Collapsed">
+            <Border Name="dragSelectionBorder" BorderBrush="Blue" BorderThickness="1" Background="LightBlue" CornerRadius="1" Opacity="0.3"/>
+        </Canvas>
+        <Canvas Name="dragFocusCanvas" Visibility="Collapsed">
+            <Border Name="dragFocusBorder" BorderBrush="Blue" BorderThickness="1" Background="LightBlue" CornerRadius="1" Opacity="0.3"/>
+        </Canvas>
+    </Grid>
+
+</UserControl>

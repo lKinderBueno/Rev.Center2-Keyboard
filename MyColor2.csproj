@@ -1,0 +1,1571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BB8B564-59EC-4F76-BD35-3CBEF657C534}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rev.Center2_Keyboard</RootNamespace>
+    <AssemblyName>Rev.Center2 Keyboard</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEMO</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Demo|AnyCPU'">
+    <OutputPath>bin\Release_Demo\</OutputPath>
+    <DefineConstants>TRACE;DEMO</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="KBTable.xaml.cs">
+      <DependentUpon>KBTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KBTable101.xaml.cs">
+      <DependentUpon>KBTable101.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KBTable102.xaml.cs">
+      <DependentUpon>KBTable102.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyAPPShell.cs" />
+    <Compile Include="MyDefine.cs" />
+    <Compile Include="Setting.xaml.cs">
+      <DependentUpon>Setting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tips.xaml.cs">
+      <DependentUpon>Tips.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Compile Include="WMIEC.cs" />
+    <Page Include="KBTable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KBTable101.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KBTable102.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Language\en-US.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Language\zh-CN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MoUIControlStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="Setting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tips.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NativeMethod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MyColor2.reg" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\key_0_fh.png" />
+    <Resource Include="Image\key_1_fh.png" />
+    <Resource Include="Image\key_2_fh.png" />
+    <Resource Include="Image\key_3_fh.png" />
+    <Resource Include="Image\key_4_fh.png" />
+    <Resource Include="Image\key_5_fh.png" />
+    <Resource Include="Image\key_6_fh.png" />
+    <Resource Include="Image\key_7_fh.png" />
+    <Resource Include="Image\key_8_fh.png" />
+    <Resource Include="Image\key_9_fh.png" />
+    <Resource Include="Image\key_alt1_fh.png" />
+    <Resource Include="Image\key_alt2_fh.png" />
+    <Resource Include="Image\key_and_fh.png" />
+    <Resource Include="Image\key_asterisk_fh.png" />
+    <Resource Include="Image\key_at_fh.png" />
+    <Resource Include="Image\key_a_fh.png" />
+    <Resource Include="Image\key_backslash_fh.png" />
+    <Resource Include="Image\key_backspace_fh.png" />
+    <Resource Include="Image\key_b_fh.png" />
+    <Resource Include="Image\key_capslock_fh.png" />
+    <Resource Include="Image\key_caret_fh.png" />
+    <Resource Include="Image\key_closebrace_fh.png" />
+    <Resource Include="Image\key_closebracket_fh.png" />
+    <Resource Include="Image\key_colon_fh.png" />
+    <Resource Include="Image\key_ctrl1_fh.png" />
+    <Resource Include="Image\key_ctrl2_fh.png" />
+    <Resource Include="Image\key_c_fh.png" />
+    <Resource Include="Image\key_dash_fh.png" />
+    <Resource Include="Image\key_del2_fh.png" />
+    <Resource Include="Image\key_del_fh.png" />
+    <Resource Include="Image\key_division_fh.png" />
+    <Resource Include="Image\key_dollar_fh.png" />
+    <Resource Include="Image\key_down_fh.png" />
+    <Resource Include="Image\key_d_fh.png" />
+    <Resource Include="Image\key_end_fh.png" />
+    <Resource Include="Image\key_enter1_fh.png" />
+    <Resource Include="Image\key_enter2_fh.png" />
+    <Resource Include="Image\key_equals_fh.png" />
+    <Resource Include="Image\key_esc_fh.png" />
+    <Resource Include="Image\key_exclamation_fh.png" />
+    <Resource Include="Image\key_e_fh.png" />
+    <Resource Include="Image\key_f10_fh.png" />
+    <Resource Include="Image\key_f11_fh.png" />
+    <Resource Include="Image\key_f12_fh.png" />
+    <Resource Include="Image\key_f1_fh.png" />
+    <Resource Include="Image\key_f2_fh.png" />
+    <Resource Include="Image\key_f3_fh.png" />
+    <Resource Include="Image\key_f4_fh.png" />
+    <Resource Include="Image\key_f5_fh.png" />
+    <Resource Include="Image\key_f6_fh.png" />
+    <Resource Include="Image\key_f7_fh.png" />
+    <Resource Include="Image\key_f8_fh.png" />
+    <Resource Include="Image\key_f9_fh.png" />
+    <Resource Include="Image\key_fn_fh.png" />
+    <Resource Include="Image\key_f_fh.png" />
+    <Resource Include="Image\key_greaterthan_fh.png" />
+    <Resource Include="Image\key_g_fh.png" />
+    <Resource Include="Image\key_home_fh.png" />
+    <Resource Include="Image\key_h_fh.png" />
+    <Resource Include="Image\key_insert_fh.png" />
+    <Resource Include="Image\key_i_fh.png" />
+    <Resource Include="Image\key_j_fh.png" />
+    <Resource Include="Image\key_k_fh.png" />
+    <Resource Include="Image\key_left_fh.png" />
+    <Resource Include="Image\key_lessthan_fh.png" />
+    <Resource Include="Image\key_l_fh.png" />
+    <Resource Include="Image\key_minus_fh.png" />
+    <Resource Include="Image\key_m_fh.png" />
+    <Resource Include="Image\key_note_fh.png" />
+    <Resource Include="Image\key_numlock_fh.png" />
+    <Resource Include="Image\key_n_fh.png" />
+    <Resource Include="Image\key_openbrace_fh.png" />
+    <Resource Include="Image\key_openbracket_fh.png" />
+    <Resource Include="Image\key_o_fh.png" />
+    <Resource Include="Image\key_percent_fh.png" />
+    <Resource Include="Image\key_pgdn_fh.png" />
+    <Resource Include="Image\key_pgup_fh.png" />
+    <Resource Include="Image\key_plus_fh.png" />
+    <Resource Include="Image\key_pound_fh.png" />
+    <Resource Include="Image\key_prtsc_fh.png" />
+    <Resource Include="Image\key_p_fh.png" />
+    <Resource Include="Image\key_question_fh.png" />
+    <Resource Include="Image\key_quote_fh.png" />
+    <Resource Include="Image\key_q_fh.png" />
+    <Resource Include="Image\key_right_fh.png" />
+    <Resource Include="Image\key_r_fh.png" />
+    <Resource Include="Image\key_shift1_fh.png" />
+    <Resource Include="Image\key_shift_fh.png" />
+    <Resource Include="Image\key_spacebar_fh.png" />
+    <Resource Include="Image\key_star_fh.png" />
+    <Resource Include="Image\key_s_fh.png" />
+    <Resource Include="Image\key_tab_fh.png" />
+    <Resource Include="Image\key_tilde_fh.png" />
+    <Resource Include="Image\key_t_fh.png" />
+    <Resource Include="Image\key_up_fh.png" />
+    <Resource Include="Image\key_u_fh.png" />
+    <Resource Include="Image\key_v_fh.png" />
+    <Resource Include="Image\key_windows_fh.png" />
+    <Resource Include="Image\key_w_fh.png" />
+    <Resource Include="Image\key_x_fh.png" />
+    <Resource Include="Image\key_y_fh.png" />
+    <Resource Include="Image\key_z_fh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\ball.png" />
+    <Resource Include="Image\bar.png" />
+    <Resource Include="Image\bar_bg.png" />
+    <Resource Include="Image\bar_line.png" />
+    <Resource Include="Image\btn_01_d.png" />
+    <Resource Include="Image\btn_01_h.png" />
+    <Resource Include="Image\btn_01_n.png" />
+    <Resource Include="Image\btn_01_p.png" />
+    <Resource Include="Image\btn_02_d.png" />
+    <Resource Include="Image\btn_02_h.png" />
+    <Resource Include="Image\btn_02_n.png" />
+    <Resource Include="Image\btn_02_p.png" />
+    <Resource Include="Image\btn_03_d.png" />
+    <Resource Include="Image\btn_03_h.png" />
+    <Resource Include="Image\btn_03_n.png" />
+    <Resource Include="Image\btn_03_p.png" />
+    <Resource Include="Image\btn_clear_d.png" />
+    <Resource Include="Image\btn_clear_h.png" />
+    <Resource Include="Image\btn_clear_n.png" />
+    <Resource Include="Image\btn_clear_p.png" />
+    <Resource Include="Image\btn_close_d.png" />
+    <Resource Include="Image\btn_close_h.png" />
+    <Resource Include="Image\btn_close_n.png" />
+    <Resource Include="Image\btn_close_p.png" />
+    <Resource Include="Image\btn_drop1_d.png" />
+    <Resource Include="Image\btn_drop1_h.png" />
+    <Resource Include="Image\btn_drop1_n.png" />
+    <Resource Include="Image\btn_drop1_p.png" />
+    <Resource Include="Image\btn_drop2_d.png" />
+    <Resource Include="Image\btn_drop2_h.png" />
+    <Resource Include="Image\btn_drop2_n.png" />
+    <Resource Include="Image\btn_drop2_p.png" />
+    <Resource Include="Image\btn_i_d.png" />
+    <Resource Include="Image\btn_i_h.png" />
+    <Resource Include="Image\btn_i_n.png" />
+    <Resource Include="Image\btn_i_p.png" />
+    <Resource Include="Image\btn_more1_d.png" />
+    <Resource Include="Image\btn_more1_h.png" />
+    <Resource Include="Image\btn_more1_n.png" />
+    <Resource Include="Image\btn_more1_p.png" />
+    <Resource Include="Image\btn_more2_d.png" />
+    <Resource Include="Image\btn_more2_h.png" />
+    <Resource Include="Image\btn_more2_n.png" />
+    <Resource Include="Image\btn_more2_p.png" />
+    <Resource Include="Image\btn_off_d.png" />
+    <Resource Include="Image\btn_off_n.png" />
+    <Resource Include="Image\btn_on_d.png" />
+    <Resource Include="Image\btn_on_n.png" />
+    <Resource Include="Image\btn_small_d.png" />
+    <Resource Include="Image\btn_small_h.png" />
+    <Resource Include="Image\btn_small_n.png" />
+    <Resource Include="Image\btn_small_p.png" />
+    <Resource Include="Image\check_box_d.png" />
+    <Resource Include="Image\check_box_off.png" />
+    <Resource Include="Image\check_box_on.png" />
+    <Resource Include="Image\color_bar.png" />
+    <Resource Include="Image\color_f.png" />
+    <Resource Include="Image\color_n.png" />
+    <Resource Include="Image\color_pad.png" />
+    <Resource Include="Image\color_selec.png" />
+    <Resource Include="Image\color_slide.png" />
+    <Resource Include="Image\icon_dark.png" />
+    <Resource Include="Image\icon_light.png" />
+    <Resource Include="Image\icon_tempo_fast.png" />
+    <Resource Include="Image\icon_tempo_slow.png" />
+    <Resource Include="Image\key_0_f.png" />
+    <Resource Include="Image\key_0_h.png" />
+    <Resource Include="Image\key_0_n.png" />
+    <Resource Include="Image\key_1_f.png" />
+    <Resource Include="Image\key_1_h.png" />
+    <Resource Include="Image\key_1_n.png" />
+    <Resource Include="Image\key_2_f.png" />
+    <Resource Include="Image\key_2_h.png" />
+    <Resource Include="Image\key_2_n.png" />
+    <Resource Include="Image\key_3_f.png" />
+    <Resource Include="Image\key_3_h.png" />
+    <Resource Include="Image\key_3_n.png" />
+    <Resource Include="Image\key_4_f.png" />
+    <Resource Include="Image\key_4_h.png" />
+    <Resource Include="Image\key_4_n.png" />
+    <Resource Include="Image\key_5_f.png" />
+    <Resource Include="Image\key_5_h.png" />
+    <Resource Include="Image\key_5_n.png" />
+    <Resource Include="Image\key_6_f.png" />
+    <Resource Include="Image\key_6_h.png" />
+    <Resource Include="Image\key_6_n.png" />
+    <Resource Include="Image\key_7_f.png" />
+    <Resource Include="Image\key_7_h.png" />
+    <Resource Include="Image\key_7_n.png" />
+    <Resource Include="Image\key_8_f.png" />
+    <Resource Include="Image\key_8_h.png" />
+    <Resource Include="Image\key_8_n.png" />
+    <Resource Include="Image\key_9_f.png" />
+    <Resource Include="Image\key_9_h.png" />
+    <Resource Include="Image\key_9_n.png" />
+    <Resource Include="Image\key_alt1_f.png" />
+    <Resource Include="Image\key_alt1_h.png" />
+    <Resource Include="Image\key_alt1_n.png" />
+    <Resource Include="Image\key_alt2_f.png" />
+    <Resource Include="Image\key_alt2_h.png" />
+    <Resource Include="Image\key_alt2_n.png" />
+    <Resource Include="Image\key_and_f.png" />
+    <Resource Include="Image\key_and_h.png" />
+    <Resource Include="Image\key_and_n.png" />
+    <Resource Include="Image\key_asterisk_f.png" />
+    <Resource Include="Image\key_asterisk_h.png" />
+    <Resource Include="Image\key_asterisk_n.png" />
+    <Resource Include="Image\key_at_f.png" />
+    <Resource Include="Image\key_at_h.png" />
+    <Resource Include="Image\key_at_n.png" />
+    <Resource Include="Image\key_a_f.png" />
+    <Resource Include="Image\key_a_h.png" />
+    <Resource Include="Image\key_a_n.png" />
+    <Resource Include="Image\key_backslash_f.png" />
+    <Resource Include="Image\key_backslash_h.png" />
+    <Resource Include="Image\key_backslash_n.png" />
+    <Resource Include="Image\key_backspace_f.png" />
+    <Resource Include="Image\key_backspace_h.png" />
+    <Resource Include="Image\key_backspace_n.png" />
+    <Resource Include="Image\key_b_f.png" />
+    <Resource Include="Image\key_b_h.png" />
+    <Resource Include="Image\key_b_n.png" />
+    <Resource Include="Image\key_capslock_f.png" />
+    <Resource Include="Image\key_capslock_h.png" />
+    <Resource Include="Image\key_capslock_n.png" />
+    <Resource Include="Image\key_caret_f.png" />
+    <Resource Include="Image\key_caret_h.png" />
+    <Resource Include="Image\key_caret_n.png" />
+    <Resource Include="Image\key_closebrace_f.png" />
+    <Resource Include="Image\key_closebrace_h.png" />
+    <Resource Include="Image\key_closebrace_n.png" />
+    <Resource Include="Image\key_closebracket_f.png" />
+    <Resource Include="Image\key_closebracket_h.png" />
+    <Resource Include="Image\key_closebracket_n.png" />
+    <Resource Include="Image\key_colon_f.png" />
+    <Resource Include="Image\key_colon_h.png" />
+    <Resource Include="Image\key_colon_n.png" />
+    <Resource Include="Image\key_ctrl1_f.png" />
+    <Resource Include="Image\key_ctrl1_h.png" />
+    <Resource Include="Image\key_ctrl1_n.png" />
+    <Resource Include="Image\key_ctrl2_f.png" />
+    <Resource Include="Image\key_ctrl2_h.png" />
+    <Resource Include="Image\key_ctrl2_n.png" />
+    <Resource Include="Image\key_c_f.png" />
+    <Resource Include="Image\key_c_h.png" />
+    <Resource Include="Image\key_c_n.png" />
+    <Resource Include="Image\key_dash_f.png" />
+    <Resource Include="Image\key_dash_h.png" />
+    <Resource Include="Image\key_dash_n.png" />
+    <Resource Include="Image\key_del2_f.png" />
+    <Resource Include="Image\key_del2_h.png" />
+    <Resource Include="Image\key_del2_n.png" />
+    <Resource Include="Image\key_del_f.png" />
+    <Resource Include="Image\key_del_h.png" />
+    <Resource Include="Image\key_del_n.png" />
+    <Resource Include="Image\key_division_f.png" />
+    <Resource Include="Image\key_division_h.png" />
+    <Resource Include="Image\key_division_n.png" />
+    <Resource Include="Image\key_dollar_f.png" />
+    <Resource Include="Image\key_dollar_h.png" />
+    <Resource Include="Image\key_dollar_n.png" />
+    <Resource Include="Image\key_down_f.png" />
+    <Resource Include="Image\key_down_h.png" />
+    <Resource Include="Image\key_down_n.png" />
+    <Resource Include="Image\key_d_f.png" />
+    <Resource Include="Image\key_d_h.png" />
+    <Resource Include="Image\key_d_n.png" />
+    <Resource Include="Image\key_end_f.png" />
+    <Resource Include="Image\key_end_h.png" />
+    <Resource Include="Image\key_end_n.png" />
+    <Resource Include="Image\key_enter1_f.png" />
+    <Resource Include="Image\key_enter1_h.png" />
+    <Resource Include="Image\key_enter1_n.png" />
+    <Resource Include="Image\key_enter2_f.png" />
+    <Resource Include="Image\key_enter2_h.png" />
+    <Resource Include="Image\key_enter2_n.png" />
+    <Resource Include="Image\key_equals_f.png" />
+    <Resource Include="Image\key_equals_h.png" />
+    <Resource Include="Image\key_equals_n.png" />
+    <Resource Include="Image\key_esc_f.png" />
+    <Resource Include="Image\key_esc_h.png" />
+    <Resource Include="Image\key_esc_n.png" />
+    <Resource Include="Image\key_exclamation_f.png" />
+    <Resource Include="Image\key_exclamation_h.png" />
+    <Resource Include="Image\key_exclamation_n.png" />
+    <Resource Include="Image\key_e_f.png" />
+    <Resource Include="Image\key_e_h.png" />
+    <Resource Include="Image\key_e_n.png" />
+    <Resource Include="Image\key_f10_f.png" />
+    <Resource Include="Image\key_f10_h.png" />
+    <Resource Include="Image\key_f10_n.png" />
+    <Resource Include="Image\key_f11_f.png" />
+    <Resource Include="Image\key_f11_h.png" />
+    <Resource Include="Image\key_f11_n.png" />
+    <Resource Include="Image\key_f12_f.png" />
+    <Resource Include="Image\key_f12_h.png" />
+    <Resource Include="Image\key_f12_n.png" />
+    <Resource Include="Image\key_f1_f.png" />
+    <Resource Include="Image\key_f1_h.png" />
+    <Resource Include="Image\key_f1_n.png" />
+    <Resource Include="Image\key_f2_f.png" />
+    <Resource Include="Image\key_f2_h.png" />
+    <Resource Include="Image\key_f2_n.png" />
+    <Resource Include="Image\key_f3_f.png" />
+    <Resource Include="Image\key_f3_h.png" />
+    <Resource Include="Image\key_f3_n.png" />
+    <Resource Include="Image\key_f4_f.png" />
+    <Resource Include="Image\key_f4_h.png" />
+    <Resource Include="Image\key_f4_n.png" />
+    <Resource Include="Image\key_f5_f.png" />
+    <Resource Include="Image\key_f5_h.png" />
+    <Resource Include="Image\key_f5_n.png" />
+    <Resource Include="Image\key_f6_f.png" />
+    <Resource Include="Image\key_f6_h.png" />
+    <Resource Include="Image\key_f6_n.png" />
+    <Resource Include="Image\key_f7_f.png" />
+    <Resource Include="Image\key_f7_h.png" />
+    <Resource Include="Image\key_f7_n.png" />
+    <Resource Include="Image\key_f8_f.png" />
+    <Resource Include="Image\key_f8_h.png" />
+    <Resource Include="Image\key_f8_n.png" />
+    <Resource Include="Image\key_f9_f.png" />
+    <Resource Include="Image\key_f9_h.png" />
+    <Resource Include="Image\key_f9_n.png" />
+    <Resource Include="Image\key_fn_f.png" />
+    <Resource Include="Image\key_fn_h.png" />
+    <Resource Include="Image\key_fn_n.png" />
+    <Resource Include="Image\key_f_f.png" />
+    <Resource Include="Image\key_f_h.png" />
+    <Resource Include="Image\key_f_n.png" />
+    <Resource Include="Image\key_greaterthan_f.png" />
+    <Resource Include="Image\key_greaterthan_h.png" />
+    <Resource Include="Image\key_greaterthan_n.png" />
+    <Resource Include="Image\key_g_f.png" />
+    <Resource Include="Image\key_g_h.png" />
+    <Resource Include="Image\key_g_n.png" />
+    <Resource Include="Image\key_home_f.png" />
+    <Resource Include="Image\key_home_h.png" />
+    <Resource Include="Image\key_home_n.png" />
+    <Resource Include="Image\key_h_f.png" />
+    <Resource Include="Image\key_h_h.png" />
+    <Resource Include="Image\key_h_n.png" />
+    <Resource Include="Image\key_insert_f.png" />
+    <Resource Include="Image\key_insert_h.png" />
+    <Resource Include="Image\key_insert_n.png" />
+    <Resource Include="Image\key_i_f.png" />
+    <Resource Include="Image\key_i_h.png" />
+    <Resource Include="Image\key_i_n.png" />
+    <Resource Include="Image\key_j_f.png" />
+    <Resource Include="Image\key_j_h.png" />
+    <Resource Include="Image\key_j_n.png" />
+    <Resource Include="Image\key_k_f.png" />
+    <Resource Include="Image\key_k_h.png" />
+    <Resource Include="Image\key_k_n.png" />
+    <Resource Include="Image\key_left_f.png" />
+    <Resource Include="Image\key_left_h.png" />
+    <Resource Include="Image\key_left_n.png" />
+    <Resource Include="Image\key_lessthan_f.png" />
+    <Resource Include="Image\key_lessthan_h.png" />
+    <Resource Include="Image\key_lessthan_n.png" />
+    <Resource Include="Image\key_l_f.png" />
+    <Resource Include="Image\key_l_h.png" />
+    <Resource Include="Image\key_l_n.png" />
+    <Resource Include="Image\key_minus_f.png" />
+    <Resource Include="Image\key_minus_h.png" />
+    <Resource Include="Image\key_minus_n.png" />
+    <Resource Include="Image\key_m_f.png" />
+    <Resource Include="Image\key_m_h.png" />
+    <Resource Include="Image\key_m_n.png" />
+    <Resource Include="Image\key_note_f.png" />
+    <Resource Include="Image\key_note_h.png" />
+    <Resource Include="Image\key_note_n.png" />
+    <Resource Include="Image\key_numlock_f.png" />
+    <Resource Include="Image\key_numlock_h.png" />
+    <Resource Include="Image\key_numlock_n.png" />
+    <Resource Include="Image\key_n_f.png" />
+    <Resource Include="Image\key_n_h.png" />
+    <Resource Include="Image\key_n_n.png" />
+    <Resource Include="Image\key_openbrace_f.png" />
+    <Resource Include="Image\key_openbrace_h.png" />
+    <Resource Include="Image\key_openbrace_n.png" />
+    <Resource Include="Image\key_openbracket_f.png" />
+    <Resource Include="Image\key_openbracket_h.png" />
+    <Resource Include="Image\key_openbracket_n.png" />
+    <Resource Include="Image\key_o_f.png" />
+    <Resource Include="Image\key_o_h.png" />
+    <Resource Include="Image\key_o_n.png" />
+    <Resource Include="Image\key_percent_f.png" />
+    <Resource Include="Image\key_percent_h.png" />
+    <Resource Include="Image\key_percent_n.png" />
+    <Resource Include="Image\key_pgdn_f.png" />
+    <Resource Include="Image\key_pgdn_h.png" />
+    <Resource Include="Image\key_pgdn_n.png" />
+    <Resource Include="Image\key_pgup_f.png" />
+    <Resource Include="Image\key_pgup_h.png" />
+    <Resource Include="Image\key_pgup_n.png" />
+    <Resource Include="Image\key_plus_f.png" />
+    <Resource Include="Image\key_plus_h.png" />
+    <Resource Include="Image\key_plus_n.png" />
+    <Resource Include="Image\key_pound_f.png" />
+    <Resource Include="Image\key_pound_h.png" />
+    <Resource Include="Image\key_pound_n.png" />
+    <Resource Include="Image\key_prtsc_f.png" />
+    <Resource Include="Image\key_prtsc_h.png" />
+    <Resource Include="Image\key_prtsc_n.png" />
+    <Resource Include="Image\key_p_f.png" />
+    <Resource Include="Image\key_p_h.png" />
+    <Resource Include="Image\key_p_n.png" />
+    <Resource Include="Image\key_question_f.png" />
+    <Resource Include="Image\key_question_h.png" />
+    <Resource Include="Image\key_question_n.png" />
+    <Resource Include="Image\key_quote_f.png" />
+    <Resource Include="Image\key_quote_h.png" />
+    <Resource Include="Image\key_quote_n.png" />
+    <Resource Include="Image\key_q_f.png" />
+    <Resource Include="Image\key_q_h.png" />
+    <Resource Include="Image\key_q_n.png" />
+    <Resource Include="Image\key_right_f.png" />
+    <Resource Include="Image\key_right_h.png" />
+    <Resource Include="Image\key_right_n.png" />
+    <Resource Include="Image\key_r_f.png" />
+    <Resource Include="Image\key_r_h.png" />
+    <Resource Include="Image\key_r_n.png" />
+    <Resource Include="Image\key_shift1_f.png" />
+    <Resource Include="Image\key_shift1_h.png" />
+    <Resource Include="Image\key_shift1_n.png" />
+    <Resource Include="Image\key_shift_f.png" />
+    <Resource Include="Image\key_shift_h.png" />
+    <Resource Include="Image\key_shift_n.png" />
+    <Resource Include="Image\key_spacebar_f.png" />
+    <Resource Include="Image\key_spacebar_h.png" />
+    <Resource Include="Image\key_spacebar_n.png" />
+    <Resource Include="Image\key_star_f.png" />
+    <Resource Include="Image\key_star_h.png" />
+    <Resource Include="Image\key_star_n.png" />
+    <Resource Include="Image\key_s_f.png" />
+    <Resource Include="Image\key_s_h.png" />
+    <Resource Include="Image\key_s_n.png" />
+    <Resource Include="Image\key_tab_f.png" />
+    <Resource Include="Image\key_tab_h.png" />
+    <Resource Include="Image\key_tab_n.png" />
+    <Resource Include="Image\key_tilde_f.png" />
+    <Resource Include="Image\key_tilde_h.png" />
+    <Resource Include="Image\key_tilde_n.png" />
+    <Resource Include="Image\key_t_f.png" />
+    <Resource Include="Image\key_t_h.png" />
+    <Resource Include="Image\key_t_n.png" />
+    <Resource Include="Image\key_up_f.png" />
+    <Resource Include="Image\key_up_h.png" />
+    <Resource Include="Image\key_up_n.png" />
+    <Resource Include="Image\key_u_f.png" />
+    <Resource Include="Image\key_u_h.png" />
+    <Resource Include="Image\key_u_n.png" />
+    <Resource Include="Image\key_v_f.png" />
+    <Resource Include="Image\key_v_h.png" />
+    <Resource Include="Image\key_v_n.png" />
+    <Resource Include="Image\key_windows_f.png" />
+    <Resource Include="Image\key_windows_h.png" />
+    <Resource Include="Image\key_windows_n.png" />
+    <Resource Include="Image\key_w_f.png" />
+    <Resource Include="Image\key_w_h.png" />
+    <Resource Include="Image\key_w_n.png" />
+    <Resource Include="Image\key_x_f.png" />
+    <Resource Include="Image\key_x_h.png" />
+    <Resource Include="Image\key_x_n.png" />
+    <Resource Include="Image\key_y_f.png" />
+    <Resource Include="Image\key_y_h.png" />
+    <Resource Include="Image\key_y_n.png" />
+    <Resource Include="Image\key_z_f.png" />
+    <Resource Include="Image\key_z_h.png" />
+    <Resource Include="Image\key_z_n.png" />
+    <Resource Include="Image\logo_color.png" />
+    <Resource Include="Image\popup_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\ID_kb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon_mycolor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\bottom_arrow.png" />
+    <Resource Include="Image\bottom_center.png" />
+    <Resource Include="Image\bottom_left.png" />
+    <Resource Include="Image\bottom_right.png" />
+    <Resource Include="Image\btn04_h.png" />
+    <Resource Include="Image\btn05_d.png" />
+    <Resource Include="Image\btn05_h.png" />
+    <Resource Include="Image\btn05_n.png" />
+    <Resource Include="Image\btn05_p.png" />
+    <Resource Include="Image\dialog1_bg.png" />
+    <Resource Include="Image\dialog2_bg.png" />
+    <Resource Include="Image\middle_center.png" />
+    <Resource Include="Image\middle_left.png" />
+    <Resource Include="Image\middle_right.png" />
+    <Resource Include="Image\tip_f.png" />
+    <Resource Include="Image\tip_n.png" />
+    <Resource Include="Image\top_arrow.png" />
+    <Resource Include="Image\top_center.png" />
+    <Resource Include="Image\top_left.png" />
+    <Resource Include="Image\top_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\btn04_n.png" />
+    <Resource Include="Image\btn04_p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2ndKB_Img\UK\normal\0_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\1_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\2_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\3_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\4_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\5_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\6_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\7_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\8_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\9_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\altgr_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\at_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\A_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\backslash_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\backspace_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\B_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\capslock_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\colon_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\C_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\del_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\down_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\D_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\end_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\enter_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\equal_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\esc_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\E_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f10_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f11_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f12_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f1_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f2_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f3_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f4_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f5_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f6_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f7_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f8_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\f9_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Fn_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\F_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\G_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\hashtag_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\home_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\H_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\I_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\J_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\K_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Lalt_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Lctrl_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\left_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\less_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\list_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Lparantheses_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Lshift_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\L_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\more_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\M_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\n0_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\n1_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\n2_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\n3_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\n4_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\n5_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\n6_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\n7_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\n8_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\n9_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\ndevide_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\ndot_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\nenter_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\nminus_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\nmultiply_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\nplus_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\numlock_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\N_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\O_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\pgdn_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\pgup_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\prtsc_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\P_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\question_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Quotes_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Q_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Rctrl_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\right_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Rparantheses_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Rshift_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\R_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\space_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\S_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\tab_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\T_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\underline_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\up_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\U_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\V_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\windows_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\W_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\X_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Y_n.png" />
+    <Resource Include="Image\2ndKB_Img\UK\normal\Z_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2ndKB_Img\US\normal\1_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\2_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\3_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\4_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\5_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\6_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\7_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\8_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\9_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\A_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Backslash_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\backspace_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\B_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\capslock_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\colon_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\C_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\del_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\down_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\D_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\end_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\enter_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\equal_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\esc_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\E_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f10_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f11_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f12_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f1_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f2_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f3_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f4_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f5_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f6_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f7_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f8_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\f9_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Fn_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\F_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\G_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\home_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\H_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\I_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\J_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\K_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Lalt_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Lctrl_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\left_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\less_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\list_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Lparantheses_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Lshift_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\L_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\more_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\M_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\n0_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\n1_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\n2_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\n3_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\n4_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\n5_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\n6_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\n7_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\n8_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\n9_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\ndevide_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\ndot_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\nenter_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\nminus_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\nmultiply_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\nplus_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\numlock_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\N_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\O_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\pgdn_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\pgup_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\prtsc_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\P_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\question_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\quotation_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Q_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Ralt_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Rctrl_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\right_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Rparantheses_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Rshift_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\R_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\space_1n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\space_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\S_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\tab_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\tilde_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\T_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\underline_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\up_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\U_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\V_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\windows_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\W_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\X_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Y_n.png" />
+    <Resource Include="Image\2ndKB_Img\US\normal\Z_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2ndKB_Img\US\focus\0_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\1_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\2_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\3_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\4_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\5_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\6_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\7_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\8_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\9_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\A_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Backslash_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\backspace_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\B_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\capslock_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\colon_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\C_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\del_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\down_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\D_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\end_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\enter_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\equal_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\esc_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\E_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f10_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f11_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f12_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f1_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f2_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f3_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f4_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f5_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f6_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f7_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f8_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\f9_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Fn_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\F_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\G_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\home_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\H_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\I_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\J_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\K_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Lalt_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Lctrl_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\left_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\less_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\list_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Lparantheses_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Lshift_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\L_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\more_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\M_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\n0_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\n1_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\n2_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\n3_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\n4_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\n5_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\n6_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\n7_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\n8_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\n9_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\ndevide_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\ndot_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\nenter_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\nminus_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\nmultiply_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\nplus_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\numlock_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\N_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\O_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\pgdn_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\pgup_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\prtsc_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\P_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\question_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\quotation_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Q_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Ralt_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Rctrl_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\right_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Rparantheses_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Rshift_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\R_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\space_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\S_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\tab_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\tilde_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\T_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\underline_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\up_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\U_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\V_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\windows_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\W_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\X_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Y_f.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus\Z_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2ndKB_Img\UK\focus\0_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\1_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\2_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\3_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\4_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\5_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\6_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\7_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\8_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\9_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\altgr_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\at_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\A_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\backslash_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\backspace_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\B_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\capslock_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\colon_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\C_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\del_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\down_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\D_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\end_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\enter_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\equal_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\esc_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\E_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f10_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f11_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f12_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f1_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f2_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f3_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f4_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f5_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f6_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f7_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f8_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\f9_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Fn_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\F_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\G_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\hashtag_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\home_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\H_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\I_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\J_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\K_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Lalt_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Lctrl_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\left_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\less_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\list_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Lparantheses_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Lshift_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\L_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\more_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\M_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\n0_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\n1_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\n2_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\n3_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\n4_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\n5_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\n6_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\n7_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\n8_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\n9_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\ndevide_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\ndot_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\nenter_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\nminus_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\nmultiply_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\nplus_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\numlock_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\N_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\O_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\pgdn_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\pgup_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\prtsc_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\P_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\question_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Quotes_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Q_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Rctrl_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\right_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Rparantheses_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Rshift_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\R_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\space_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\S_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\tab_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\T_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\underline_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\up_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\U_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\V_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\windows_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\W_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\X_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Y_f.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus\Z_f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\0_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\1_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\2_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\3_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\4_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\5_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\6_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\7_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\8_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\9_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\altgr_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\at_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\A_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\backslash_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\backspace_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\B_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\capslock_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\colon_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\C_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\del_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\down_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\D_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\end_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\enter_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\equal_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\esc_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\E_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f10_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f11_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f12_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f1_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f2_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f3_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f4_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f5_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f6_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f7_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f8_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\f9_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Fn_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\F_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\G_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\hashtag_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\home_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\H_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\I_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\J_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\K_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Lalt_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Lctrl_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\left_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\less_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\list_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Lparantheses_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Lshift_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\L_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\more_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\M_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\n0_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\n1_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\n2_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\n3_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\n4_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\n5_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\n6_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\n7_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\n8_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\n9_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\ndevide_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\ndot_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\nenter_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\nminus_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\nmultiply_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\nplus_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\numlock_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\N_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\O_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\pgdn_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\pgup_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\prtsc_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\P_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\question_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Quotes_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Q_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Rctrl_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\right_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Rparantheses_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Rshift_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\R_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\space_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\S_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\tab_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\T_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\underline_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\up_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\U_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\V_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\windows_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\W_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\X_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Y_fh.png" />
+    <Resource Include="Image\2ndKB_Img\UK\focus_hover\Z_fh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2ndKB_Img\UK\hover\0_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\1_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\2_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\3_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\4_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\5_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\6_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\7_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\8_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\9_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\altgr_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\at_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\A_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\backslash_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\backspace_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\B_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\capslock_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\colon_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\C_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\del_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\down_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\D_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\end_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\enter_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\equal_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\esc_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\E_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f10_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f11_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f12_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f1_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f2_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f3_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f4_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f5_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f6_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f7_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f8_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\f9_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Fn_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\F_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\G_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\hashtag_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\home_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\H_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\I_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\J_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\K_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Lalt_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Lctrl_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\left_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\less_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\list_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Lparantheses_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Lshift_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\L_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\more_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\M_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\n0_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\n1_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\n2_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\n3_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\n4_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\n5_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\n6_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\n7_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\n8_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\n9_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\ndevide_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\ndot_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\nenter_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\nminus_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\nmultiply_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\nplus_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\numlock_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\N_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\O_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\pgdn_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\pgup_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\prtsc_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\P_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\question_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Quotes_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Q_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Rctrl_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\right_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Rparantheses_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Rshift_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\R_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\space_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\S_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\tab_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\T_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\underline_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\up_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\U_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\V_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\windows_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\W_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\X_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Y_h.png" />
+    <Resource Include="Image\2ndKB_Img\UK\hover\Z_h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2ndKB_Img\US\focus hover\0_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\1_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\2_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\3_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\4_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\5_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\6_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\7_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\8_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\9_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\A_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Backslash_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\backspace_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\B_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\capslock_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\colon_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\C_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\del_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\down_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\D_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\end_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\enter_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\equal_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\esc_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\E_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f10_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f11_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f12_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f1_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f2_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f3_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f4_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f5_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f6_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f7_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f8_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\f9_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Fn_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\F_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\G_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\home_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\H_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\I_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\J_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\K_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Lalt_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Lctrl_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\left_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\less_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\list_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Lparantheses_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Lshift_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\L_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\more_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\M_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\n0_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\n1_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\n2_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\n3_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\n4_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\n5_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\n6_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\n7_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\n8_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\n9_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\ndevide_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\ndot_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\nenter_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\nminus_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\nmultiply_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\nplus_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\numlock_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\N_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\O_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\pgdn_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\pgup_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\prtsc_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\P_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\question_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\quotation_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Q_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Ralt_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Rctrl_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\right_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Rparantheses_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Rshift_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\R_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\space_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\S_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\tab_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\tilde_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\T_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\underline_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\up_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\U_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\V_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\windows_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\W_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\X_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Y_fh.png" />
+    <Resource Include="Image\2ndKB_Img\US\focus hover\Z_fh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2ndKB_Img\US\hover\0_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\1_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\2_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\3_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\4_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\5_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\6_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\7_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\8_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\9_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\A_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Backslash_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\backspace_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\B_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\capslock_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\colon_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\C_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\del_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\down_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\D_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\end_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\enter_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\equal_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\esc_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\E_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f10_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f11_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f12_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f1_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f2_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f3_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f4_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f5_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f6_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f7_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f8_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\f9_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Fn_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\F_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\G_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\home_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\H_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\I_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\J_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\K_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Lalt_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Lctrl_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\left_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\less_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\list_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Lparantheses_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Lshift_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\L_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\more_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\M_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\n0_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\n1_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\n2_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\n3_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\n4_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\n5_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\n6_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\n7_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\n8_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\n9_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\ndevide_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\ndot_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\nenter_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\nminus_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\nmultiply_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\nplus_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\numlock_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\N_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\O_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\pgdn_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\pgup_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\prtsc_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\P_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\question_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\quotation_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Q_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Ralt_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Rctrl_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\right_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Rparantheses_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Rshift_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\R_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\space_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\S_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\tab_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\tilde_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\T_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\underline_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\up_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\U_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\V_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\windows_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\W_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\X_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Y_h.png" />
+    <Resource Include="Image\2ndKB_Img\US\hover\Z_h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2ndKB_Img\US\normal\0_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bg_title_bar_3.png" />
+    <Resource Include="bg_title_bar_31.png" />
+    <Resource Include="btn_mem_setting_dropdown_on.png" />
+    <Resource Include="btn_mem_setting_dropdown_on1.png" />
+    <Resource Include="btn_mem_setting_dropdown_on2.png" />
+    <Resource Include="btn_mem_setting_dropdown_on3.png" />
+    <Resource Include="btn_mem_setting_dropdown_on4.png" />
+    <Resource Include="btn_mem_setting_dropdown_on5.png" />
+    <Resource Include="ic_close.png" />
+    <Resource Include="ic_close1.png" />
+    <Resource Include="ic_minimize.png" />
+    <Resource Include="ic_minimize1.png" />
+    <Resource Include="slider_gpu_setting_1.png" />
+    <Resource Include="slider_gpu_setting_11.png" />
+    <Resource Include="slider_handle_layer1.png" />
+    <Resource Include="slider_handle_layer11.png" />
+    <Resource Include="slider_range_2.png" />
+    <Resource Include="slider_range_21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="white-gear-png-gear-icon-png-white-gear-icon-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="KB_ita.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kb_usa.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="btn_close_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="dark-minimalist-wallpaper-new-minimalism-triangle-black-abstract-wallpapers-hd-of-dark-minimalist-wallpaper.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /Y MyColor2.exe $(SolutionDir)$(Configuration)
+xcopy /Y $(ProjectDir)MyColor2.reg $(SolutionDir)$(Configuration)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

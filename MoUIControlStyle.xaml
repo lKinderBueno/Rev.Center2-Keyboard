@@ -1,0 +1,1849 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!--Basic Style-->
+    <Style TargetType="{x:Type Control}" x:Key="baseStyle">
+        <Setter Property="FontSize" Value="40"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Control.Height" Value="60"/>
+        <Setter Property="Control.Width" Value="221"/>
+    </Style>
+
+    <!--OnOffScrollBtnStyle ImageButton Style-->
+    <Style x:Key="OnOffScrollBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="FunctionCircleBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Ellipse x:Name="Ellipse" Width="94" Height="94" StrokeThickness="2">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="image\Launcher_20160825-2_03.png"/>
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Ellipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="image\Launcher_20160825_03.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Ellipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="image\Launcher_20160825-2_03.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Ellipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="image\Launcher_20160825-2_03.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--4-Fromat Funtional ImageButton Style-->
+    <Style x:Key="FunctionBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn02_n.png"/>
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn02_o.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn02_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn02_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--4-Fromat Clear ImageButton Style-->
+    <Style x:Key="ClearBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn_clear_n.png"/>
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_clear_h.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_clear_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_clear_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--4-Fromat Apply ImageButton Style-->
+    <Style x:Key="ApplyBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn_02_n.png"/>
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_02_h.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_02_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_02_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--MyColor ImageButton Style-->
+    <Style x:Key="MyColorBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn_mycolor_n.png"/>
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_mycolor_h.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_mycolor_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_mycolor_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--MacroKey ImageButton Style-->
+    <Style x:Key="MacroKeyBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn_marcokb_n.png"/>
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_marcokb_h.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_marcokb_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_marcokb_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--FanTool ImageButton Style-->
+    <Style x:Key="FanToolBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn_fan_n.png"/>
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_fan_h.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_fan_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_fan_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TitleBar Tip ImageButton Style-->
+    <Style x:Key="TitleBarTipBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn_i_n.png"/>
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_i_h.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_i_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_i_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TitleBar Close ImageButton Style-->
+    <Style x:Key="TitleBarCloseBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn_close_n.png"/>
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_close_h.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_close_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_close_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TitleBar Hide ImageButton Style-->
+    <Style x:Key="TitleBarSmallBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn_small_n.png" />
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_small_h.png" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_small_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn_small_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TitleBar Account ImageButton Style-->
+    <Style x:Key="TitleBarAccountBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/account_n.png" />
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/account_o.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/account_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/account_2.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TitleBar Account Already Login ImageButton Style-->
+    <Style x:Key="HDDetailInfoBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn01_n.png" />
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn01_o.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn01_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn01_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TitleBar Account Already Login ImageButton Style-->
+    <Style x:Key="PopBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/pop_btn01_n.png" />
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/pop_btn01_o.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/pop_btn01_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/pop_btn01_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- TitleBar Setting ImageButton Style-->
+    <Style x:Key="TitleBarSettingBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/setting_n.png" />
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/setting_o.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/setting_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/setting_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Popup Page Close ImageButton Style-->
+    <Style x:Key="PopupPageCloseBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/close_pop_n.png" />
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/close_pop_o.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/close_pop_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/close_pop_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Hardware Info TabItem Style -->
+
+    <ControlTemplate TargetType="TabItem" x:Key="HDInfoTabItemTemplate">
+        <Grid Name="Panel">
+            <ContentPresenter x:Name="ContentSite"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            ContentSource="Header"
+                            Width="179"
+                            Height="50"
+                            Margin="0"
+                            />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter TargetName="Panel" Property="Background" Value="#1e8acc" />
+            </Trigger>
+
+            <Trigger Property="IsSelected" Value="False">
+                <Setter TargetName="Panel" Property="Background" Value="TransParent" />
+            </Trigger>
+            <!--<Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="Panel" Property="Background" Value="#1a4c6c" />
+            </Trigger>-->
+        </ControlTemplate.Triggers>
+
+    </ControlTemplate>
+
+    <!-- LoginPage LoginBtn Style-->
+    <Style x:Key="LoginBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement" Background="#1e8acc">
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background" Value="#2b9de2" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background" Value="#0c5e90"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background" Value="#14283c" />
+                            <Setter Property="Foreground" Value="#4bffffff"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="True">
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!-- Account Drop Btn Style-->
+    <Style x:Key="DropAccountBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement" Background="#ec4300">
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"  />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background" Value="#ff500b" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background" Value="#b73400"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background" Value="#5f3829" />
+                            <Setter Property="Foreground" Value="#4bffffff"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="True">
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <!--Scrollbar Thumbs-->
+    <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Grid x:Name="Grid">
+                        <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Fill="Transparent" />
+                        <Border x:Name="Rectangle1" CornerRadius="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto"  Background="{TemplateBinding Background}" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Tag" Value="Horizontal">
+                            <Setter TargetName="Rectangle1" Property="Width" Value="Auto" />
+                            <Setter TargetName="Rectangle1" Property="Height" Value="3" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--ScrollBars-->
+    <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+        <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
+        <Setter Property="Foreground" Value="#666666" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Width" Value="6" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollBar}">
+                    <Grid x:Name="GridRoot" Width="6" Background="{TemplateBinding Background}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0" />
+                            <RowDefinition Height="0.00001*" />
+                            <RowDefinition Height="0" />
+                        </Grid.RowDefinitions>
+
+                        <Track x:Name="PART_Track" Grid.Row="1" IsDirectionReversed="true" Focusable="false">
+                            <Track.Thumb>
+                                <Thumb x:Name="Thumb" Background="{TemplateBinding Foreground}" Style="{DynamicResource ScrollThumbs}" />
+                            </Track.Thumb>
+                            <Track.IncreaseRepeatButton>
+                                <RepeatButton x:Name="PageUp" Command="ScrollBar.PageDownCommand" Opacity="0" Focusable="false" />
+                            </Track.IncreaseRepeatButton>
+                            <Track.DecreaseRepeatButton>
+                                <RepeatButton x:Name="PageDown" Command="ScrollBar.PageUpCommand" Opacity="0" Focusable="false" />
+                            </Track.DecreaseRepeatButton>
+                        </Track>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger SourceName="Thumb" Property="IsMouseOver" Value="true">
+                            <Setter Value="#888888" TargetName="Thumb" Property="Background" />
+                        </Trigger>
+                        <Trigger SourceName="Thumb" Property="IsDragging" Value="true">
+                            <Setter Value="#333333" TargetName="Thumb" Property="Background" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="Thumb" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="Orientation" Value="Horizontal">
+                            <Setter TargetName="GridRoot" Property="LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="PART_Track" Property="LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Width" Value="Auto" />
+                            <Setter Property="Height" Value="12" />
+                            <Setter TargetName="Thumb" Property="Tag" Value="Horizontal" />
+                            <Setter TargetName="PageDown" Property="Command" Value="ScrollBar.PageLeftCommand" />
+                            <Setter TargetName="PageUp" Property="Command" Value="ScrollBar.PageRightCommand" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--ScrollBar Style2-->
+    <Style x:Key="lightScrollBar" TargetType="{x:Type ScrollBar}">
+        <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
+        <Setter Property="Foreground" Value="#666666" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Width" Value="6" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollBar}">
+                    <Grid x:Name="GridRoot" Width="6" Background="{TemplateBinding Background}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0" />
+                            <RowDefinition Height="0.00001*" />
+                            <RowDefinition Height="0" />
+                        </Grid.RowDefinitions>
+
+                        <Track x:Name="PART_Track" Grid.Row="1" IsDirectionReversed="true" Focusable="false">
+                            <Track.Thumb>
+                                <Thumb x:Name="Thumb" Background="{TemplateBinding Foreground}" Style="{DynamicResource ScrollThumbs}" />
+                            </Track.Thumb>
+                            <Track.IncreaseRepeatButton>
+                                <RepeatButton x:Name="PageUp" Command="ScrollBar.PageDownCommand" Opacity="0" Focusable="false" />
+                            </Track.IncreaseRepeatButton>
+                            <Track.DecreaseRepeatButton>
+                                <RepeatButton x:Name="PageDown" Command="ScrollBar.PageUpCommand" Opacity="0" Focusable="false" />
+                            </Track.DecreaseRepeatButton>
+                        </Track>
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger SourceName="Thumb" Property="IsMouseOver" Value="true">
+                            <Setter Value="#888888" TargetName="Thumb" Property="Background" />
+                        </Trigger>
+                        <Trigger SourceName="Thumb" Property="IsDragging" Value="true">
+                            <Setter Value="#333333" TargetName="Thumb" Property="Background" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="Thumb" Property="Visibility" Value="Collapsed" />
+                        </Trigger>
+                        <Trigger Property="Orientation" Value="Horizontal">
+                            <Setter TargetName="GridRoot" Property="LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="PART_Track" Property="LayoutTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90" />
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Width" Value="Auto" />
+                            <Setter Property="Height" Value="12" />
+                            <Setter TargetName="Thumb" Property="Tag" Value="Horizontal" />
+                            <Setter TargetName="PageDown" Property="Command" Value="ScrollBar.PageLeftCommand" />
+                            <Setter TargetName="PageUp" Property="Command" Value="ScrollBar.PageRightCommand" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="{x:Type ScrollViewer}" TargetType="{x:Type ScrollViewer}">
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                    <Grid>
+                        <Grid Background="{TemplateBinding Background}">
+                            <ScrollContentPresenter 
+                                x:Name="PART_ScrollContentPresenter"
+                                Margin="{TemplateBinding Padding}"
+                                Content="{TemplateBinding Content}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                CanContentScroll="{TemplateBinding CanContentScroll}"/>
+                            <ScrollBar  
+                                HorizontalAlignment="Right"
+                                x:Name="PART_VerticalScrollBar"
+                                Grid.Column="1"
+                                Minimum="0.0"
+                                Maximum="{TemplateBinding ScrollableHeight}"
+                                ViewportSize="{TemplateBinding ViewportHeight}"
+                                Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=VerticalOffset, Mode=OneWay}"
+                                Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"         
+                                Cursor="Arrow"
+                                AutomationProperties.AutomationId="VerticalScrollBar"
+                                />
+                            <ScrollBar 
+                                VerticalAlignment="Bottom"
+                                x:Name="PART_HorizontalScrollBar"
+                                Orientation="Horizontal"
+                                Grid.Row="1"
+                                Minimum="0.0"
+                                Maximum="{TemplateBinding ScrollableWidth}"
+                                ViewportSize="{TemplateBinding ViewportWidth}"
+                                Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalOffset, Mode=OneWay}"
+                                Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                                Cursor="Arrow"
+                                AutomationProperties.AutomationId="HorizontalScrollBar"/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- ComboBox -->
+    <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+        <Grid>
+
+            <Border
+                  x:Name="Border" 
+                  Grid.ColumnSpan="2"
+                  CornerRadius="0"
+                  Background="White"
+                  BorderBrush="White"
+                  BorderThickness="0"
+                />
+            <!--<Border 
+                  Grid.Column="0"
+                  CornerRadius="0" 
+                  Margin="8,0,0,8" 
+                  Background="#2c6d8a" 
+                  BorderBrush="White"
+                  BorderThickness="0" />-->
+            <Image 
+                  x:Name="Arrow" Width="50" Height="40"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"                                    
+                  Margin="160,0,0,0"
+                  Source="image/btn_drop1_n.png"
+                />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="#01AFC8" />
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_drop1_h.png"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="White" />
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_drop1_p.png"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="#1c82c0" />
+            </Trigger>
+            <!--<Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="Border" Property="Background" Value="#4c97ba" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="#7bc5e7" />
+                <Setter Property="Foreground" Value="#4c97ba"/>
+            </Trigger>-->
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="ComboBoxTextBox" TargetType="{x:Type TextBox}">
+        <Border x:Name="PART_ContentHost" Focusable="False" Background="{TemplateBinding Background}" />
+    </ControlTemplate>
+
+    <!-- ComboBoxItem 1 Styles -->
+    <Style x:Key="ComboBoxItem1" TargetType="{x:Type ComboBoxItem}" >
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="Foreground" Value="#2E352D"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="MinHeight" Value="46"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                    <Border Name="Border"
+                            Padding="16,0,0,0"
+                            SnapsToDevicePixels="true"
+                            >
+                        <ContentPresenter
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Stretch"
+                            />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHighlighted" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="#01AFC8"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#01AFC8"/>
+                        </Trigger>
+                        <!--<Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Mode ComboBox 1 Style -->
+    <!--Mode ComboBoxToggleButton 1 Style -->
+    <ControlTemplate x:Key="ModeComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+        <Grid>
+
+            <Border
+                  x:Name="Border" 
+                  Grid.ColumnSpan="2"
+                  CornerRadius="0"
+                  Background="White"
+                  BorderBrush="White"
+                  BorderThickness="0"
+                />
+            <!--<Border 
+                  Grid.Column="0"
+                  CornerRadius="0" 
+                  Margin="8,0,0,8" 
+                  Background="#2c6d8a" 
+                  BorderBrush="White"
+                  BorderThickness="0" />-->
+            <Image 
+                  x:Name="Arrow" Width="42" Height="40"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"                                    
+                  Margin="170,0,0,0"
+                  Source="image/btn_drop1_n.png"
+                />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="#01AFC8" />
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_drop1_h.png"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="White" />
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_drop1_p.png"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="#1c82c0" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <!--Setter TargetName="Border" Property="Background" Value="#4c97ba" /-->
+                <!--Setter TargetName="Border" Property="BorderBrush" Value="#7bc5e7" /-->
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_drop1_d.png"/>
+                <!--Setter Property="Foreground" Value="#4c97ba"/-->
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style  x:Key="ModeListComboxStyle" TargetType="{x:Type ComboBox}">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+        <!--  <Setter Property="MinWidth" Value="210"/>-->
+        <Setter Property="MinHeight" Value="40"/>
+        <Setter Property="Foreground" Value="#2E352D"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <Grid>
+                        <ToggleButton 
+                            Name="ToggleButton" 
+                            Template="{StaticResource ModeComboBoxToggleButton}" 
+                            Grid.Column="2" 
+                            Focusable="false"
+                            IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                            ClickMode="Press">
+                        </ToggleButton>
+                        <ContentPresenter Name="ContentSite" IsHitTestVisible="False" 
+                            Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="16,3,23,3"           
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" 
+                            />
+                        <TextBox x:Name="PART_EditableTextBox"
+                            Style="{x:Null}" 
+                            Template="{StaticResource ComboBoxTextBox}" 
+                            Foreground="{TemplateBinding Foreground}"
+                            IsReadOnly="{TemplateBinding IsReadOnly}"
+                            Visibility="Hidden" />
+                        <Popup 
+                            Name="Popup"
+                            Placement="Bottom"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            AllowsTransparency="True" 
+                            Focusable="False"
+                            PopupAnimation="Slide">
+
+                            <Grid Name="DropDown"
+                              SnapsToDevicePixels="True"                
+                              MinWidth="{TemplateBinding ActualWidth}"
+                              MaxHeight="598">
+                                <!--MaxHeight="{TemplateBinding MaxDropDownHeight}"-->
+                                <Border 
+                                x:Name="DropDownBorder"
+                                Background="White"
+                                BorderThickness="0"
+                                BorderBrush="White"/>
+                                <ScrollViewer Margin="0,0,0,0" SnapsToDevicePixels="True" VerticalScrollBarVisibility="Auto" Background="Transparent" >
+                                    <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="Transparent"/>
+                            <Setter Property="Background" Value="#4c97ba"/> 
+                        </Trigger>
+                        <Trigger Property="IsGrouping" Value="true">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                        </Trigger>
+                        <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                            <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="0"/>
+                            <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                        </Trigger>
+                        <Trigger Property="IsEditable"  Value="true">
+                            <Setter Property="IsTabStop" Value="false"/>
+                            <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Option ComboBox 1 Style -->
+    <!--Option ComboBoxToggleButton 1 Style -->
+    <ControlTemplate x:Key="OptionComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+        <Grid>
+
+            <Border
+                  x:Name="Border" 
+                  Grid.ColumnSpan="2"
+                  CornerRadius="0"
+                  Background="Transparent"
+                  BorderBrush="Transparent"
+                  BorderThickness="0"
+                />
+            <!--<Border 
+                  Grid.Column="0"
+                  CornerRadius="0" 
+                  Margin="8,0,0,8" 
+                  Background="#2c6d8a" 
+                  BorderBrush="White"
+                  BorderThickness="0" />-->
+            <Image 
+                  x:Name="Arrow" Width="42" Height="40"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"                                    
+                  Margin="138,0,0,0"
+                  Source="image/btn_more1_n.png"
+                />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="Transparent" />
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_more1_h.png"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="Transparent" />
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_more1_p.png"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="Transparent" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_more1_d.png"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style  x:Key="OptionListComboxStyle" TargetType="{x:Type ComboBox}">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+        <!--  <Setter Property="MinWidth" Value="210"/>-->
+        <Setter Property="MinHeight" Value="40"/>
+        <Setter Property="Foreground" Value="#2E352D"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <Grid>
+                        <ToggleButton 
+                            Name="ToggleButton" 
+                            Template="{StaticResource OptionComboBoxToggleButton}" 
+                            Grid.Column="2" 
+                            Focusable="false"
+                            IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                            ClickMode="Press">
+                        </ToggleButton>
+                        <ContentPresenter Name="ContentSite" IsHitTestVisible="False" 
+                            Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="16,3,23,3"           
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" 
+                            />
+                        <TextBox x:Name="PART_EditableTextBox"
+                            Style="{x:Null}" 
+                            Template="{StaticResource ComboBoxTextBox}" 
+                            Foreground="{TemplateBinding Foreground}"
+                            IsReadOnly="{TemplateBinding IsReadOnly}"
+                            Visibility="Hidden" />
+                        <Popup 
+                            Name="Popup"
+                            Placement="Bottom"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            AllowsTransparency="True" 
+                            Focusable="False"
+                            PopupAnimation="Slide">
+
+                            <Grid Name="DropDown"
+                              SnapsToDevicePixels="True"                
+                              MinWidth="{TemplateBinding ActualWidth}"
+                              MaxHeight="184">
+                                <!--MaxHeight="{TemplateBinding MaxDropDownHeight}"-->
+                                <Border 
+                                x:Name="DropDownBorder"
+                                Background="White"
+                                BorderThickness="0"
+                                BorderBrush="White"/>
+                                <ScrollViewer Margin="0,0,0,0" SnapsToDevicePixels="True" VerticalScrollBarVisibility="Auto" Background="Transparent" >
+                                    <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <!--<Setter Property="Foreground" Value="#7bc5e7"/>
+                            <Setter Property="Background" Value="#4c97ba"/>-->
+                        </Trigger>
+                        <Trigger Property="IsGrouping" Value="true">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                        </Trigger>
+                        <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                            <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="0"/>
+                            <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                        </Trigger>
+                        <Trigger Property="IsEditable"  Value="true">
+                            <Setter Property="IsTabStop" Value="false"/>
+                            <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!-- ComboBoxItem 2 Styles -->
+    <Style x:Key="ComboBoxItem2" TargetType="{x:Type ComboBoxItem}" >
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="MinHeight" Value="46"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                    <Border Name="Border"
+                            Padding="16,0,0,0"
+                            SnapsToDevicePixels="true"
+                            >
+                        <ContentPresenter
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Stretch"
+                            />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <!--<Trigger Property="IsHighlighted" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="#1c82c0"/>
+                        </Trigger>-->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="#495561"/>
+                        </Trigger>
+                        <!--<Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="White"/>
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>    
+    <!--Mode ComboBox Style 2 -->
+    <!--Mode ComboBoxToggleButton Style 2 -->
+    <ControlTemplate x:Key="ModeComboBoxToggleButton2" TargetType="{x:Type ToggleButton}">
+        <Grid>
+
+            <Border
+                  x:Name="Border" 
+                  Grid.ColumnSpan="2"
+                  CornerRadius="0"
+                  Background="#141D24"
+                  BorderBrush="#141D24"
+                  BorderThickness="0"
+                />
+            <!--<Border 
+                  Grid.Column="0"
+                  CornerRadius="0" 
+                  Margin="8,0,0,8" 
+                  Background="#2c6d8a" 
+                  BorderBrush="White"
+                  BorderThickness="0" />-->
+            <Image 
+                  x:Name="Arrow" Width="34" Height="33"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"                                    
+                  Margin="121,0,0,0"
+                  Source="image/btn_drop2_n.png"
+                />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="#495561" />
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_drop2_h.png"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="#141D24" />
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_drop2_p.png"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="#495561" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <!--Setter TargetName="Border" Property="Background" Value="#4c97ba" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="#7bc5e7" />
+                <Setter Property="Foreground" Value="#4c97ba"/-->
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_drop2_d.png"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style  x:Key="ModeListComboxStyle2" TargetType="{x:Type ComboBox}">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+        <!--  <Setter Property="MinWidth" Value="210"/>-->
+        <Setter Property="MinHeight" Value="33"/>
+        <Setter Property="Foreground" Value="#141D24"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <Grid>
+                        <ToggleButton 
+                            Name="ToggleButton" 
+                            Template="{StaticResource ModeComboBoxToggleButton2}" 
+                            Grid.Column="2" 
+                            Focusable="false"
+                            IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                            ClickMode="Press">
+                        </ToggleButton>
+                        <ContentPresenter Name="ContentSite" IsHitTestVisible="False" 
+                            Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="16,3,23,3"           
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" 
+                            />
+                        <TextBox x:Name="PART_EditableTextBox"
+                            Style="{x:Null}" 
+                            Template="{StaticResource ComboBoxTextBox}" 
+                            Foreground="{TemplateBinding Foreground}"
+                            IsReadOnly="{TemplateBinding IsReadOnly}"
+                            Visibility="Hidden" />
+                        <Popup 
+                            Name="Popup"
+                            Placement="Bottom"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            AllowsTransparency="True" 
+                            Focusable="False"
+                            PopupAnimation="Slide">
+
+                            <Grid Name="DropDown"
+                              SnapsToDevicePixels="True"                
+                              MinWidth="{TemplateBinding ActualWidth}"
+                              MaxHeight="184">
+                                <!--MaxHeight="{TemplateBinding MaxDropDownHeight}"-->
+                                <Border 
+                                x:Name="DropDownBorder"
+                                Background="#141D24"
+                                BorderThickness="0"
+                                BorderBrush="#141D24"/>
+                                <ScrollViewer Margin="0.5,0,-0.5,0" SnapsToDevicePixels="True" VerticalScrollBarVisibility="Auto" Background="Transparent" >
+                                    <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="Transparent"/>
+                            <Setter Property="Background" Value="#141D24"/>
+                        </Trigger>
+                        <Trigger Property="IsGrouping" Value="true">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                        </Trigger>
+                        <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                            <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="0"/>
+                            <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                        </Trigger>
+                        <Trigger Property="IsEditable"  Value="true">
+                            <Setter Property="IsTabStop" Value="false"/>
+                            <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Option ComboBox Style 2 -->
+    <!--Option ComboBoxToggleButton Style 2 -->
+    <ControlTemplate x:Key="OptionComboBoxToggleButton2" TargetType="{x:Type ToggleButton}">
+        <Grid>
+
+            <Border
+                  x:Name="Border" 
+                  Grid.ColumnSpan="2"
+                  CornerRadius="0"
+                  Background="Transparent"
+                  BorderBrush="Transparent"
+                  BorderThickness="0"
+                />
+            <!--<Border 
+                  Grid.Column="0"
+                  CornerRadius="0" 
+                  Margin="8,0,0,8" 
+                  Background="#2c6d8a" 
+                  BorderBrush="White"
+                  BorderThickness="0" />-->
+            <Image 
+                  x:Name="Arrow" Width="34" Height="33"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Top"                                    
+                  Margin="121,0,0,0"
+                  Source="image/btn_more2_n.png"
+                />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="Transparent" />
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_more2_h.png"/>
+            </Trigger>
+            <Trigger Property="ToggleButton.IsChecked" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="Transparent" />
+                <Setter TargetName="Arrow" Property="Source" Value="image/btn_more2_p.png"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter TargetName="Border" Property="Background" Value="Transparent" />
+            </Trigger>
+            <!--<Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="Border" Property="Background" Value="#4c97ba" />
+                <Setter TargetName="Border" Property="BorderBrush" Value="#7bc5e7" />
+                <Setter Property="Foreground" Value="#4c97ba"/>
+            </Trigger>-->
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style  x:Key="OptionListComboxStyle2" TargetType="{x:Type ComboBox}">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+        <!--  <Setter Property="MinWidth" Value="210"/>-->
+        <Setter Property="MinHeight" Value="33"/>
+        <Setter Property="Foreground" Value="#141D24"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <Grid>
+                        <ToggleButton 
+                            Name="ToggleButton" 
+                            Template="{StaticResource OptionComboBoxToggleButton2}" 
+                            Grid.Column="2" 
+                            Focusable="false"
+                            IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+                            ClickMode="Press">
+                        </ToggleButton>
+                        <ContentPresenter Name="ContentSite" IsHitTestVisible="False" 
+                            Content="{TemplateBinding SelectionBoxItem}"
+                            ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+                            Margin="16,3,23,3"           
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" 
+                            />
+                        <TextBox x:Name="PART_EditableTextBox"
+                            Style="{x:Null}" 
+                            Template="{StaticResource ComboBoxTextBox}" 
+                            Foreground="{TemplateBinding Foreground}"
+                            IsReadOnly="{TemplateBinding IsReadOnly}"
+                            Visibility="Hidden" />
+                        <Popup 
+                            Name="Popup"
+                            Placement="Bottom"
+                            IsOpen="{TemplateBinding IsDropDownOpen}"
+                            AllowsTransparency="True" 
+                            Focusable="False"
+                            PopupAnimation="Slide">
+
+                            <Grid Name="DropDown"
+                              SnapsToDevicePixels="True"                
+                              MinWidth="{TemplateBinding ActualWidth}"
+                              MaxHeight="184">
+                                <!--MaxHeight="{TemplateBinding MaxDropDownHeight}"-->
+                                <Border 
+                                x:Name="DropDownBorder"
+                                Background="#141D24"
+                                BorderThickness="0"
+                                BorderBrush="#141D24"/>
+                                <ScrollViewer Margin="0,0,0,0" SnapsToDevicePixels="True" VerticalScrollBarVisibility="Auto" Background="Transparent" >
+                                    <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                </ScrollViewer>
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <!--<Setter Property="Foreground" Value="#7bc5e7"/>
+                            <Setter Property="Background" Value="#4c97ba"/>-->
+                        </Trigger>
+                        <Trigger Property="IsGrouping" Value="true">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                        </Trigger>
+                        <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                            <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="0"/>
+                            <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                        </Trigger>
+                        <Trigger Property="IsEditable"  Value="true">
+                            <Setter Property="IsTabStop" Value="false"/>
+                            <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+    <!-- TitleBar Account Already Login ImageButton Style-->
+    <Style x:Key="AccountInfoBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement"
+                            CornerRadius="0" 
+                            Background="Transparent"
+                            BorderThickness="1"
+                            BorderBrush="#1c82c0">
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <Border.Triggers>
+
+                        </Border.Triggers>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="BorderBrush" Value="#00a2ff" />
+
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background" Value="#003d6a"/>
+                            <Setter TargetName="ButtonBackgroundElement" Property="BorderThickness" Value="0"/>
+                        </Trigger>
+                        <!--<Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn01_d.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!-- Check Box Style-->
+    <Style x:Key="CheckBoxFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border>
+                        <Rectangle 
+            Margin="15,0,0,0"
+            StrokeThickness="1"
+            Stroke="#60000000"
+            StrokeDashArray="1 2"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="{x:Type CheckBox}" TargetType="CheckBox">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="FocusVisualStyle"    Value="{StaticResource CheckBoxFocusVisual}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <BulletDecorator Background="Transparent">
+                        <BulletDecorator.Bullet>
+                            <Border x:Name="Border"  
+                                Width="18" 
+                                Height="18" 
+                                CornerRadius="0" 
+                                Background="Transparent"
+                                BorderThickness="1"
+                                BorderBrush="White">
+                                <!--<Path 
+                                    Width="7" Height="7" 
+                                    x:Name="CheckMark"
+                                    SnapsToDevicePixels="False" 
+                                    Stroke="{StaticResource GlyphBrush}"
+                                    StrokeThickness="2"
+                                    Data="M 0 0 L 7 7 M 0 7 L 7 0" />-->
+                                <Image 
+                                      x:Name="CheckMark"    
+                                      Width="17" Height="17"
+                                      Source="image/check_on.png"
+                                    />
+                            </Border>
+                        </BulletDecorator.Bullet>
+                        <ContentPresenter Margin="4,0,0,0"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            RecognizesAccessKey="True"/>
+                    </BulletDecorator>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="false">
+                            <Setter TargetName="CheckMark" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="{x:Null}">
+                            <Setter TargetName="CheckMark" Property="Source" Value="image/check_on.png"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="White" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <!--<Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PressedBrush}" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource PressedBorderBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource DisabledBackgroundBrush}" />
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource DisabledBorderBrush}" />
+                            <Setter Property="Foreground" Value="{StaticResource DisabledForegroundBrush}"/>
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Clickable Textblock white style-->
+    <Style x:Key="WhiteTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <SolidColorBrush Color="White"/>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="#cccccc" />
+            </Trigger>
+
+            <EventTrigger RoutedEvent="MouseDown">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" 
+                                            To="#424242"
+                                            AutoReverse="True"
+                                            Duration="0"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+
+        </Style.Triggers>
+    </Style>
+
+    <!-- RadioButton Style-->
+    <Style x:Key="RadioButtonFocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border>
+                        <Rectangle 
+            Margin="15,0,0,0"
+            StrokeThickness="1"
+            Stroke="#60000000"
+            StrokeDashArray="1 2"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="{x:Type RadioButton}" TargetType="{x:Type RadioButton}">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="FocusVisualStyle"    Value="{StaticResource RadioButtonFocusVisual}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <BulletDecorator Background="Transparent">
+                        <BulletDecorator.Bullet>
+                            <Grid Width="18" 
+                                 Height="18" >
+                                <Ellipse x:Name="Border"  
+                                        Fill="Transparent"
+                                        StrokeThickness="1"
+                                        Stroke="White" />
+                                <Ellipse x:Name="CheckMark"
+                                        Margin="3"
+                                        Fill="#1e8acc" />
+                            </Grid>
+                        </BulletDecorator.Bullet>
+                        <ContentPresenter 
+                            Margin="4,0,0,0"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            RecognizesAccessKey="True"/>
+                    </BulletDecorator>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="false">
+                            <Setter TargetName="CheckMark" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                        <!--<Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="Border" Property="Fill" Value="{StaticResource DarkBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="Border" Property="Fill" Value="{StaticResource PressedBrush}" />
+                            <Setter TargetName="Border" Property="Stroke" Value="{StaticResource GlyphBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter TargetName="Border" Property="Fill" Value="{StaticResource DisabledBackgroundBrush}" />
+                            <Setter TargetName="Border" Property="Stroke" Value="#40000000" />
+                            <Setter Property="Foreground" Value="#80000000"/>
+                        </Trigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TitleBar Setting ImageButton Style-->
+    <Style x:Key="BlueBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <TextBlock x:Name="innerText" Foreground="#3daff5" Cursor="Hand" TextDecorations="Underline" >
+                         <ContentPresenter />
+                    </TextBlock>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsMouseOver" Value="true">
+                            <Setter TargetName="innerText" Property="Foreground" Value="#4AC5FF" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter TargetName="innerText" Property="Foreground" Value="#2b9de2" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--4-Fromat Tips Close ImageButton Style-->
+    <Style x:Key="TipsCloseBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn04_n.png"/>
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn04_h.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn04_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn04_n.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--4-Fromat Tips PreviousNext ImageButton Style-->
+    <Style x:Key="TipsPreviousNextBtnStyle" TargetType="{x:Type Button}" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="ButtonBackgroundElement">
+                        <Border.Background>
+                            <ImageBrush Stretch="None" ImageSource="image/btn05_n.png"/>
+                        </Border.Background>
+                        <ContentPresenter x:Name="ButtonContentPresenter" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn05_h.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn05_p.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="ButtonBackgroundElement" Property="Background">
+                                <Setter.Value>
+                                    <ImageBrush Stretch="None" ImageSource="image/btn05_n.png"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
